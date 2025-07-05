@@ -1,0 +1,73 @@
+<section id="hero">
+<style>
+  #hero {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+  
+  .hero-cta {
+    background: white;
+    color: #2563eb;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: #2563eb;
+  }
+  
+  @media (max-width: 768px) {
+    #hero {
+      padding: 3rem 1rem;
+      min-height: 60vh;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<div class="hero-container">
+  <h1 class="hero-title">Smarter Marketing. Simplified Growth.</h1>
+  <p class="hero-subtitle">We use AI & automation to help small businesses grow faster without working harder.</p>
+  <a href="#calendar" class="hero-cta">Book a Demo</a>
+</div>
+</section>

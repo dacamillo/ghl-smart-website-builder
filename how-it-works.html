@@ -1,0 +1,116 @@
+<section id="how-it-works">
+<style>
+  #how-it-works {
+    padding: 5rem 2rem;
+    background: white;
+  }
+  
+  .how-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .how-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .step {
+    flex: 1;
+    position: relative;
+  }
+  
+  .step-number {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .step-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .step-description {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+  
+  .step-arrow {
+    position: absolute;
+    top: 2rem;
+    right: -1rem;
+    font-size: 2rem;
+    color: #2563eb;
+  }
+  
+  .step:last-child .step-arrow {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    #how-it-works {
+      padding: 3rem 1rem;
+    }
+    
+    .how-title {
+      font-size: 2rem;
+    }
+    
+    .steps-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .step-arrow {
+      display: none;
+    }
+  }
+</style>
+
+<div class="how-container">
+  <h2 class="how-title">How It Works</h2>
+  
+  <div class="steps-container">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3 class="step-title">Discovery Call</h3>
+      <p class="step-description">We learn about your business, goals, and current challenges to create a custom automation strategy.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3 class="step-title">Automation Setup</h3>
+      <p class="step-description">Our team implements and configures your AI-powered systems to work seamlessly with your business.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3 class="step-title">Smart Growth Results</h3>
+      <p class="step-description">Watch your business grow on autopilot while you focus on what you do best.</p>
+    </div>
+  </div>
+</div>
+</section>

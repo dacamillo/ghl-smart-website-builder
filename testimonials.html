@@ -1,0 +1,142 @@
+<section id="testimonials">
+<style>
+  #testimonials {
+    padding: 5rem 2rem;
+    background: white;
+  }
+  
+  .testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid #2563eb;
+    position: relative;
+  }
+  
+  .quote-icon {
+    font-size: 3rem;
+    color: #2563eb;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .client-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .client-avatar {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .client-details {
+    flex: 1;
+  }
+  
+  .client-name {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+  
+  .client-business {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    #testimonials {
+      padding: 3rem 1rem;
+    }
+    
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .testimonials-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<div class="testimonials-container">
+  <h2 class="testimonials-title">What Our Clients Say</h2>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">"Smart Solution Agency transformed our lead generation completely. We went from struggling to find customers to having a steady stream of qualified leads every week. The automation saves us hours each day!"</p>
+      <div class="client-info">
+        <div class="client-avatar">MJ</div>
+        <div class="client-details">
+          <div class="client-name">Mike Johnson</div>
+          <div class="client-business">Johnson Roofing Services</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">"The AI-powered CRM has been a game changer for our dental practice. Patient follow-ups are automatic, appointments stay filled, and our online reputation has never been better. Highly recommend!"</p>
+      <div class="client-info">
+        <div class="client-avatar">SW</div>
+        <div class="client-details">
+          <div class="client-name">Dr. Sarah Williams</div>
+          <div class="client-business">Bright Smile Dental</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">"Working with Smart Solution Agency was the best business decision we made this year. Their automation systems helped us double our revenue while actually working fewer hours. The team is incredibly knowledgeable and supportive."</p>
+      <div class="client-info">
+        <div class="client-avatar">TC</div>
+        <div class="client-details">
+          <div class="client-name">Tom Chen</div>
+          <div class="client-business">Chen's Home Services</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
