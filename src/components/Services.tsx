@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
   const [selectedService, setSelectedService] = useState<number | null>(null);
 
   const services = [
@@ -184,7 +186,7 @@ const Services = () => {
 
                   <div className="mt-8">
                     <button
-                      onClick={scrollToCalendar}
+                      onClick={() => navigate('/contact')}
                       className="w-full bg-gradient-to-r from-primary to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                     >
                       Get Started with {services[selectedService].title}

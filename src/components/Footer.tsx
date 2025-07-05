@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 const Footer = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -72,7 +76,7 @@ const Footer = () => {
               "The best time to automate was yesterday. The second best time is now."
             </p>
             <button
-              onClick={() => scrollToSection('calendar')}
+              onClick={() => navigate('/contact')}
               className="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               Start Today
