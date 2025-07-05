@@ -24,7 +24,7 @@ const Pricing = () => {
     {
       name: "Growth Plan",
       price: "$1,997",
-      period: "Setup + $197/MONTHLY",
+      period: "Setup + $297/MONTHLY",
       icon: "🚀",
       description: "Get started with premium features in our growth plan!",
       features: [
