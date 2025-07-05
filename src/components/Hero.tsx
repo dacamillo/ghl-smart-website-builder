@@ -1,0 +1,31 @@
+const Hero = () => {
+  const scrollToCalendar = () => {
+    const element = document.getElementById('calendar');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section id="hero" className="bg-gradient-to-br from-primary to-purple-600 text-white py-20 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Smarter Marketing. Simplified Growth.
+          </h1>
+          <p className="text-xl md:text-2xl mb-10 opacity-90 leading-relaxed">
+            We use AI & automation to help small businesses grow faster without working harder.
+          </p>
+          <button
+            onClick={scrollToCalendar}
+            className="bg-white text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 inline-block"
+          >
+            Book a Demo
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
