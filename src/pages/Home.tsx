@@ -1,6 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import HowItWorks from "@/components/HowItWorks";
 import CallToAction from "@/components/CallToAction";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -8,6 +11,8 @@ const Home = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <Services />
+      <HowItWorks />
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
@@ -33,6 +38,7 @@ const Home = () => {
         </div>
       </section>
       <CallToAction />
+      <Testimonials />
       <Footer />
     </div>
   );
