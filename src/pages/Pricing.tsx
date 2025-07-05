@@ -3,10 +3,6 @@ import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
 const Pricing = () => {
-  const scrollToCalendar = () => {
-    window.location.href = '/contact#calendar';
-  };
-
   const plans = [
     {
       name: "Starter Plan",
@@ -22,7 +18,8 @@ const Pricing = () => {
         "Lead Management App",
         "Contact Form and Chat Widget"
       ],
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a4eeba110ff568d6234"
     },
     {
       name: "Growth Plan",
@@ -39,7 +36,8 @@ const Pricing = () => {
         "Calendar Booking System"
       ],
       color: "from-orange-500 to-red-500",
-      popular: true
+      popular: true,
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a1fd6ab80b40ee65d0f"
     },
     {
       name: "Unlimited Plan",
@@ -55,7 +53,8 @@ const Pricing = () => {
         "Google and Facebook Ads Management",
         "Bi-Monthly Marketing Consultation Calls"
       ],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
     }
   ];
 
@@ -109,7 +108,7 @@ const Pricing = () => {
                   </ul>
 
                   <button
-                    onClick={scrollToCalendar}
+                    onClick={() => window.open(plan.paymentUrl, '_blank')}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
                   >
                     Sign Up
