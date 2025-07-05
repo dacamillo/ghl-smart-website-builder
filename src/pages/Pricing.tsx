@@ -25,11 +25,11 @@ const Pricing = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      name: "Unlimited Plan",
+      name: "Growth Plan",
       price: "$1,997",
       period: "Setup + $197/MONTHLY",
       icon: "🚀",
-      description: "Get started with premium features in our unlimited plan!",
+      description: "Get started with premium features in our growth plan!",
       features: [
         "4-Page Website",
         "Everything in Starter+",
@@ -42,14 +42,14 @@ const Pricing = () => {
       popular: true
     },
     {
-      name: "Pro Plan",
+      name: "Unlimited Plan",
       price: "$2,997",
       period: "Setup + $997/MONTHLY",
       icon: "🚀",
-      description: "Get started with our affordable Starter plan, perfect for small businesses.",
+      description: "Get started with our comprehensive unlimited plan, perfect for growing businesses.",
       features: [
         "5-Page Website",
-        "Everything in Unlimited+",
+        "Everything in Growth+",
         "AI ChatBot",
         "Ongoing SEO Updates",
         "Google and Facebook Ads Management",
@@ -139,7 +139,7 @@ const Pricing = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-3">What kind of support do you provide?</h3>
-              <p className="text-muted-foreground">All plans include email support, training resources, and access to our knowledge base. Pro Plan includes bi-monthly consultation calls.</p>
+              <p className="text-muted-foreground">All plans include email support, training resources, and access to our knowledge base. Unlimited Plan includes bi-monthly consultation calls.</p>
             </div>
           </div>
         </div>
