@@ -20,40 +20,17 @@ const About = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Small businesses are the backbone of our economy, but they often struggle with the complexity 
-                and cost of modern marketing technology. We believe every business deserves access to the same 
-                powerful automation tools that big corporations use.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                That's why we've made it our mission to democratize AI-powered marketing automation, making it 
-                simple, affordable, and incredibly effective for businesses of all sizes.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Numbers</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Businesses Helped:</span>
-                  <span className="font-bold text-primary">500+</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Average Revenue Increase:</span>
-                  <span className="font-bold text-primary">40%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Time Saved per Week:</span>
-                  <span className="font-bold text-primary">15+ hours</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Client Satisfaction:</span>
-                  <span className="font-bold text-primary">98%</span>
-                </div>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Small businesses are the backbone of our economy, but they often struggle with the complexity 
+              and cost of modern marketing technology. We believe every business deserves access to the same 
+              powerful automation tools that big corporations use.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              That's why we've made it our mission to democratize AI-powered marketing automation, making it 
+              simple, affordable, and incredibly effective for businesses of all sizes.
+            </p>
           </div>
         </div>
       </section>

@@ -16,7 +16,7 @@ const CallToAction = () => {
           onClick={scrollToCalendar}
           className="bg-white text-primary px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
         >
-          Schedule Your Free Demo
+          Start Today
         </button>
       </div>
     </section>
