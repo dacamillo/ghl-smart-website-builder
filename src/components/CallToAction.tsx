@@ -1,9 +1,6 @@
 const CallToAction = () => {
   const scrollToCalendar = () => {
-    const element = document.getElementById('calendar');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = '/contact#calendar';
   };
 
   return (

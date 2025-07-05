@@ -1,53 +1,58 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const scrollToCalendar = () => {
+    if (location.pathname === '/contact') {
+      const element = document.getElementById('calendar');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/contact#calendar';
     }
     setIsMenuOpen(false);
   };
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Pricing', path: '/pricing' }
+  ];
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">Smart Solution Agency</h1>
+            <Link to="/" className="text-2xl font-bold text-primary">
+              Smart Solution Agency
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`transition-colors duration-300 ${
+                    location.pathname === item.path
+                      ? 'text-primary font-semibold'
+                      : 'text-foreground hover:text-primary'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
               <button
-                onClick={() => scrollToSection('hero')}
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('testimonials')}
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Contact
-              </button>
-              <button
-                onClick={() => scrollToSection('calendar')}
+                onClick={scrollToCalendar}
                 className="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
               >
                 Book a Call
@@ -72,32 +77,22 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                    location.pathname === item.path
+                      ? 'text-primary font-semibold'
+                      : 'text-foreground hover:text-primary'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
               <button
-                onClick={() => scrollToSection('hero')}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('testimonials')}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors duration-300"
-              >
-                Contact
-              </button>
-              <button
-                onClick={() => scrollToSection('calendar')}
+                onClick={scrollToCalendar}
                 className="block px-3 py-2 text-base font-medium bg-gradient-to-r from-primary to-purple-600 text-white rounded-lg"
               >
                 Book a Call
