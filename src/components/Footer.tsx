@@ -28,7 +28,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="animate-fade-in-delay-1">
                 <button
-                  onClick={() => scrollToSection('hero')}
+                  onClick={() => navigate('/')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Home
@@ -36,15 +36,15 @@ const Footer = () => {
               </li>
               <li className="animate-fade-in-delay-2">
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => navigate('/pricing')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  Services
+                  Pricing
                 </button>
               </li>
               <li className="animate-fade-in-delay-3">
                 <button
-                  onClick={() => scrollToSection('testimonials')}
+                  onClick={() => navigate('/about')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   About
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li className="animate-fade-in-delay-1">
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => navigate('/contact')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Contact
