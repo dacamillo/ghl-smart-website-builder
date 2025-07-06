@@ -24,7 +24,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
             What Our Clients Say
           </h2>
         </div>
@@ -33,16 +33,16 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-8 rounded-xl border-l-4 border-primary relative"
+              className={`bg-gray-50 p-8 rounded-xl border-l-4 border-primary relative animate-fade-in-delay-${index + 1} hover:animate-scale-in hover:shadow-lg transition-all duration-300 hover:-translate-y-2`}
             >
-              <div className="text-6xl text-primary opacity-20 absolute top-4 right-6">
+              <div className="text-6xl text-primary opacity-20 absolute top-4 right-6 animate-bounce-subtle">
                 "
               </div>
               <p className="text-muted-foreground italic leading-relaxed mb-6 text-lg">
                 "{testimonial.text}"
               </p>
               <div className="flex items-center">
-                <div className="bg-gradient-to-r from-primary to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                <div className="bg-gradient-to-r from-primary to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4 animate-scale-in">
                   {testimonial.avatar}
                 </div>
                 <div>

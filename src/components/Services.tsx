@@ -103,7 +103,7 @@ const Services = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
             What We Do
           </h2>
         </div>
@@ -112,9 +112,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
+              className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center animate-fade-in-delay-${Math.min(index % 3 + 1, 3)} hover:animate-scale-in`}
             >
-              <div className="text-5xl mb-4">{service.icon}</div>
+              <div className="text-5xl mb-4 animate-bounce-subtle">{service.icon}</div>
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 {service.title}
               </h3>
@@ -123,7 +123,7 @@ const Services = () => {
               </p>
               <button
                 onClick={() => setSelectedService(index)}
-                className="text-primary font-semibold hover:text-purple-600 transition-colors duration-300"
+                className="text-primary font-semibold hover:text-purple-600 transition-colors duration-300 hover:animate-bounce-subtle"
               >
                 Learn More →
               </button>

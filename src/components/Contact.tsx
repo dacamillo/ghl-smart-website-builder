@@ -19,15 +19,15 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
             Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground animate-fade-in-up-delay-1">
             Questions? Ready to start? We're just a message away.
           </p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden animate-scale-in">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/PBxvJPVYQs60N8VLUgOr"
             style={{ width: '100%', height: '552px', border: 'none', borderRadius: '4px' }}

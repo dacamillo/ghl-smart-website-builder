@@ -15,53 +15,53 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
-          <div>
-            <h3 className="text-primary text-2xl font-bold mb-4">Smart Solution Agency</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">
+          <div className="animate-slide-in-left">
+            <h3 className="text-primary text-2xl font-bold mb-4 animate-fade-in">Smart Solution Agency</h3>
+            <p className="text-gray-300 leading-relaxed mb-4 animate-fade-in-delay-1">
               We help small businesses grow smarter, not harder, through AI-powered automation and marketing solutions. Transform your business operations and watch your revenue soar while you focus on what matters most.
             </p>
           </div>
           
           {/* Quick Links */}
-          <div>
+          <div className="animate-fade-in-up">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
+              <li className="animate-fade-in-delay-1">
                 <button
                   onClick={() => scrollToSection('hero')}
-                  className="text-gray-300 hover:text-primary transition-colors duration-300"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Home
                 </button>
               </li>
-              <li>
+              <li className="animate-fade-in-delay-2">
                 <button
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-300 hover:text-primary transition-colors duration-300"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Services
                 </button>
               </li>
-              <li>
+              <li className="animate-fade-in-delay-3">
                 <button
                   onClick={() => scrollToSection('testimonials')}
-                  className="text-gray-300 hover:text-primary transition-colors duration-300"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   About
                 </button>
               </li>
-              <li>
+              <li className="animate-fade-in-delay-1">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-gray-300 hover:text-primary transition-colors duration-300"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Contact
                 </button>
               </li>
-              <li>
+              <li className="animate-fade-in-delay-2">
                 <button
                   onClick={() => scrollToSection('calendar')}
-                  className="text-gray-300 hover:text-primary transition-colors duration-300"
+                  className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
                   Book a Call
                 </button>
@@ -70,14 +70,14 @@ const Footer = () => {
           </div>
           
           {/* CTA Section */}
-          <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold mb-4">Ready to Grow?</h4>
-            <p className="text-gray-300 italic mb-6">
+          <div className="text-center md:text-left animate-slide-in-right">
+            <h4 className="text-lg font-semibold mb-4 animate-fade-in">Ready to Grow?</h4>
+            <p className="text-gray-300 italic mb-6 animate-fade-in-delay-1">
               "The best time to automate was yesterday. The second best time is now."
             </p>
             <button
               onClick={() => navigate('/contact')}
-              className="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 animate-scale-in hover:animate-bounce-subtle"
             >
               Start Today
             </button>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 pt-8 text-center">
+        <div className="border-t border-gray-700 pt-8 text-center animate-fade-in">
           <p className="text-gray-400">
             © 2024 Smart Solution Agency. All rights reserved.
           </p>
