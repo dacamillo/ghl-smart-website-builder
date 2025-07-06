@@ -69,13 +69,13 @@ const Pricing = () => {
               🔥 LIMITED TIME OFFER 🔥
             </div>
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              $100 MILLION OFFER: Setup Fee WAIVED!
+              EXCLUSIVE OFFER: Setup Fee WAIVED!
             </h2>
             <p className="text-lg md:text-xl">
-              Schedule your appointment before <strong>January 15th, 2025</strong> and save up to $2,997 on setup fees!
+              Schedule your appointment by <strong>11:59pm on {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</strong> and save up to $2,997 on setup fees!
             </p>
             <p className="text-sm mt-2 opacity-90">
-              ⏰ This exclusive offer expires soon - Don't miss out on thousands in savings!
+              ⏰ This exclusive offer expires tonight - Don't miss out on thousands in savings!
             </p>
           </div>
         </div>
