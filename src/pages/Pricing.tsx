@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -71,10 +72,16 @@ const Pricing = () => {
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
               EXCLUSIVE OFFER: Setup Fee WAIVED!
             </h2>
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-xl mb-4">
               Schedule your appointment by <strong>11:59pm on {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</strong> and save up to $2,997 on setup fees!
             </p>
-            <p className="text-sm mt-2 opacity-90">
+            <Link 
+              to="/contact#calendar"
+              className="inline-block bg-yellow-400 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:-translate-y-1 shadow-lg mb-3"
+            >
+              🎯 CLAIM YOUR WAIVED SETUP FEE NOW
+            </Link>
+            <p className="text-sm opacity-90">
               ⏰ This exclusive offer expires tonight - Don't miss out on thousands in savings!
             </p>
           </div>
