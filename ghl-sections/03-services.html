@@ -90,43 +90,380 @@
         <div class="ghl-service-icon">🤖</div>
         <h3 class="ghl-service-title">AI-Powered CRM</h3>
         <p class="ghl-service-description">Smart customer relationship management that learns and adapts to your business needs.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(0)" class="ghl-service-link">Learn More →</button>
       </div>
       
       <div class="ghl-service-card">
         <div class="ghl-service-icon">👥</div>
         <h3 class="ghl-service-title">Lead Capture Funnels</h3>
         <p class="ghl-service-description">High-converting funnels that turn visitors into qualified leads automatically.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(1)" class="ghl-service-link">Learn More →</button>
       </div>
       
       <div class="ghl-service-card">
         <div class="ghl-service-icon">💬</div>
         <h3 class="ghl-service-title">Automated Follow-Up</h3>
         <p class="ghl-service-description">Never miss a lead with intelligent follow-up sequences that nurture prospects.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(2)" class="ghl-service-link">Learn More →</button>
       </div>
       
       <div class="ghl-service-card">
         <div class="ghl-service-icon">📊</div>
         <h3 class="ghl-service-title">Reputation Management</h3>
         <p class="ghl-service-description">Build trust and credibility with automated review management and monitoring.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(3)" class="ghl-service-link">Learn More →</button>
       </div>
       
       <div class="ghl-service-card">
         <div class="ghl-service-icon">🧲</div>
         <h3 class="ghl-service-title">Retargeting Ads</h3>
         <p class="ghl-service-description">Bring back lost visitors with smart retargeting campaigns that convert.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(4)" class="ghl-service-link">Learn More →</button>
       </div>
       
       <div class="ghl-service-card">
         <div class="ghl-service-icon">📅</div>
         <h3 class="ghl-service-title">Smart Scheduling</h3>
         <p class="ghl-service-description">Streamline appointments with intelligent booking systems that work 24/7.</p>
-        <a href="/contact" class="ghl-service-link">Learn More →</a>
+        <button onclick="openServiceModal(5)" class="ghl-service-link">Learn More →</button>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Service Detail Modal -->
+<div id="serviceModal" class="service-modal" style="display: none;">
+  <div class="service-modal-overlay" onclick="closeServiceModal()"></div>
+  <div class="service-modal-content">
+    <div class="service-modal-header">
+      <div class="service-modal-title">
+        <span id="modalIcon" class="service-modal-icon"></span>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <button onclick="closeServiceModal()" class="service-modal-close">×</button>
+    </div>
+    
+    <div class="service-modal-body">
+      <div class="service-modal-left">
+        <div class="service-problem">
+          <h3>The Problem</h3>
+          <p id="modalProblem"></p>
+        </div>
+        
+        <div class="service-solution">
+          <h3>Our Solution</h3>
+          <p id="modalSolution"></p>
+        </div>
+      </div>
+      
+      <div class="service-modal-right">
+        <div class="service-results">
+          <h3>Results You'll See</h3>
+          <ul id="modalResults"></ul>
+        </div>
+        
+        <button onclick="window.location.href='/contact'" class="service-cta-btn">
+          Get Started with <span id="modalServiceName"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .service-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .service-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .service-modal-content {
+    position: relative;
+    background: white;
+    margin: 2rem auto;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 1rem;
+  }
+  
+  .service-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .service-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .service-modal-icon {
+    font-size: 2.5rem;
+  }
+  
+  .service-modal-title h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .service-modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-modal-close:hover {
+    color: #374151;
+  }
+  
+  .service-modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .service-problem {
+    background: #fef2f2;
+    border-left: 4px solid #f87171;
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-solution {
+    background: #eff6ff;
+    border-left: 4px solid #60a5fa;
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  
+  .service-results {
+    background: #f0fdf4;
+    border-left: 4px solid #34d399;
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .service-problem h3,
+  .service-solution h3,
+  .service-results h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .service-problem p,
+  .service-solution p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .service-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-results li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+  }
+  
+  .service-results li:before {
+    content: "✓";
+    color: #10b981;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .service-cta-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .service-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .service-modal-content {
+      margin: 1rem;
+      max-height: 95vh;
+    }
+    
+    .service-modal-body {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-modal-header {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const services = [
+    {
+      icon: "🤖",
+      title: "AI-Powered CRM",
+      problem: "Most small businesses lose track of leads, forget to follow up, and miss opportunities because they're managing everything manually.",
+      solution: "Our AI-powered CRM automatically tracks every interaction, scores leads by likelihood to convert, and reminds you exactly when and how to follow up.",
+      results: [
+        "35% increase in lead conversion rates",
+        "Save 10+ hours per week on admin tasks", 
+        "Never miss a follow up again",
+        "Automatic lead scoring and prioritization",
+        "Seamless integration with all your tools"
+      ]
+    },
+    {
+      icon: "👥",
+      title: "Lead Capture Funnels",
+      problem: "Your website visitors leave without giving you their contact information, and you have no way to re-engage them.",
+      solution: "We build high-converting landing pages and funnels that capture leads with irresistible offers and automatically nurture them into paying customers.",
+      results: [
+        "3x more leads from your existing traffic",
+        "Professional landing pages that convert at 25%+",
+        "Automated lead magnets and opt-in sequences",
+        "A/B tested designs for maximum performance",
+        "Mobile-optimized for today's customers"
+      ]
+    },
+    {
+      icon: "💬",
+      title: "Automated Follow-Up",
+      problem: "Leads go cold because manual follow-up is inconsistent, time-consuming, and easy to forget.",
+      solution: "Our automated follow-up system sends personalized messages at the perfect timing, keeps leads warm, and moves them through your sales funnel automatically.",
+      results: [
+        "50% more leads convert to customers",
+        "Save 15+ hours per week on follow-up",
+        "Consistent messaging that builds trust",
+        "Automatic lead nurturing sequences",
+        "Smart timing based on lead behavior"
+      ]
+    },
+    {
+      icon: "📊",
+      title: "Reputation Management",
+      problem: "Bad reviews hurt your business, and you're not getting enough positive reviews to build trust with potential customers.",
+      solution: "Our reputation management system automatically requests reviews from happy customers, monitors your online presence, and helps you respond to feedback professionally.",
+      results: [
+        "4x more positive reviews per month",
+        "Improved Google ranking and visibility",
+        "Professional response to all feedback",
+        "Automated review request sequences",
+        "Real-time reputation monitoring"
+      ]
+    },
+    {
+      icon: "🧲",
+      title: "Retargeting Ads",
+      problem: "97% of website visitors leave without buying, and you have no way to bring them back to complete their purchase.",
+      solution: "Our smart retargeting campaigns show personalized ads to people who visited your site, bringing them back when they're ready to buy.",
+      results: [
+        "25% increase in overall conversions",
+        "Lower cost per acquisition",
+        "Personalized ads based on behavior",
+        "Cross-platform retargeting campaigns",
+        "Automated audience optimization"
+      ]
+    },
+    {
+      icon: "📅",
+      title: "Smart Scheduling",
+      problem: "Phone tag and back-and-forth emails waste time when trying to schedule appointments, and you lose business from missed opportunities.",
+      solution: "Our smart scheduling system lets customers book appointments instantly, sends automatic reminders, and integrates with your calendar and CRM.",
+      results: [
+        "60% more appointments booked",
+        "Eliminate phone tag and scheduling emails",
+        "Automatic appointment reminders",
+        "Calendar sync across all devices",
+        "Reduced no-shows and cancellations"
+      ]
+    }
+  ];
+
+  function openServiceModal(serviceIndex) {
+    const service = services[serviceIndex];
+    const modal = document.getElementById('serviceModal');
+    
+    document.getElementById('modalIcon').textContent = service.icon;
+    document.getElementById('modalTitle').textContent = service.title;
+    document.getElementById('modalProblem').textContent = service.problem;
+    document.getElementById('modalSolution').textContent = service.solution;
+    document.getElementById('modalServiceName').textContent = service.title;
+    
+    const resultsList = document.getElementById('modalResults');
+    resultsList.innerHTML = '';
+    service.results.forEach(result => {
+      const li = document.createElement('li');
+      li.textContent = result;
+      resultsList.appendChild(li);
+    });
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeServiceModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('serviceModal');
+    if (event.target === modal) {
+      closeServiceModal();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeServiceModal();
+    }
+  });
+</script>
