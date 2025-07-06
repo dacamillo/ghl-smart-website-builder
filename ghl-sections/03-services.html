@@ -1,0 +1,132 @@
+<!-- SERVICES SECTION - Add as second section on Home page -->
+<style>
+  .ghl-services {
+    padding: 5rem 2rem;
+    background: #f9fafb;
+  }
+  
+  .ghl-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ghl-services-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .ghl-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .ghl-service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .ghl-service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ghl-service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ghl-service-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .ghl-service-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ghl-service-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .ghl-service-link:hover {
+    color: #7c3aed;
+  }
+  
+  @media (max-width: 768px) {
+    .ghl-services {
+      padding: 3rem 1rem;
+    }
+    
+    .ghl-services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .ghl-services-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<section class="ghl-services">
+  <div class="ghl-services-container">
+    <h2 class="ghl-services-title">What We Do</h2>
+    
+    <div class="ghl-services-grid">
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">🤖</div>
+        <h3 class="ghl-service-title">AI-Powered CRM</h3>
+        <p class="ghl-service-description">Smart customer relationship management that learns and adapts to your business needs.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">👥</div>
+        <h3 class="ghl-service-title">Lead Capture Funnels</h3>
+        <p class="ghl-service-description">High-converting funnels that turn visitors into qualified leads automatically.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">💬</div>
+        <h3 class="ghl-service-title">Automated Follow-Up</h3>
+        <p class="ghl-service-description">Never miss a lead with intelligent follow-up sequences that nurture prospects.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">📊</div>
+        <h3 class="ghl-service-title">Reputation Management</h3>
+        <p class="ghl-service-description">Build trust and credibility with automated review management and monitoring.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">🧲</div>
+        <h3 class="ghl-service-title">Retargeting Ads</h3>
+        <p class="ghl-service-description">Bring back lost visitors with smart retargeting campaigns that convert.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon">📅</div>
+        <h3 class="ghl-service-title">Smart Scheduling</h3>
+        <p class="ghl-service-description">Streamline appointments with intelligent booking systems that work 24/7.</p>
+        <a href="#contact" class="ghl-service-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>

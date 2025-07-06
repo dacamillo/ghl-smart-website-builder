@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Smart Solution Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(to right, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-orange { background: linear-gradient(to right, #f97316, #ef4444); }
+        .gradient-blue { background: linear-gradient(to right, #3b82f6, #06b6d4); }
+        .gradient-purple { background: linear-gradient(to right, #8b5cf6, #ec4899); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Flexible Pricing Options to Suit Your Needs</h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90 max-w-4xl mx-auto">
+                Tailored Pricing for Your Business Needs
+            </p>
+        </div>
+    </section>
+
+    <!-- Urgent Offer Banner -->
+    <section class="bg-red-600 text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 bg-yellow-400 text-red-900 px-4 py-2 rounded-full font-bold text-sm mb-2">
+                    🔥 LIMITED TIME OFFER 🔥
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                    EXCLUSIVE OFFER: Setup Fee WAIVED!
+                </h2>
+                <p class="text-lg md:text-xl mb-4">
+                    Schedule your appointment by <strong>11:59pm TODAY</strong> and save up to $2,997 on setup fees!
+                </p>
+                <a href="#calendar" class="bg-yellow-400 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:-translate-y-1 shadow-lg mb-3 inline-block">
+                    🎯 CLAIM YOUR WAIVED SETUP FEE NOW
+                </a>
+                <p class="text-sm opacity-90">
+                    ⏰ This exclusive offer expires tonight - Don't miss out on thousands in savings!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-4xl mb-4">🚀</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter Plan</h3>
+                            <p class="text-gray-600 mb-4">Get started with our affordable Starter plan, perfect for basic website needs!</p>
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold gradient-text">$997</span>
+                                <div class="text-gray-600 mt-1">Setup + $97/MONTHLY</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">3-Page Website</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">On-Page SEO</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">SMS and Email Automations</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Missed Call Text Back</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Lead Management App</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Contact Form and Chat Widget</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPayment('https://link.fastpaydirect.com/payment-link/68697a4eeba110ff568d6234')" class="w-full gradient-purple text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Growth Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 ring-4 ring-blue-600 ring-opacity-50">
+                    <div class="bg-blue-600 text-white text-center py-2 text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-4xl mb-4">🚀</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Growth Plan</h3>
+                            <p class="text-gray-600 mb-4">Get started with premium features in our growth plan!</p>
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold text-orange-500">$1,997</span>
+                                <div class="text-gray-600 mt-1">Setup + $297/MONTHLY</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">4-Page Website</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Everything in Starter+</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Advanced SMS and Email Automations</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Google Reviews Automation</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Payment Processing</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Calendar Booking System</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPayment('https://link.fastpaydirect.com/payment-link/68697a1fd6ab80b40ee65d0f')" class="w-full gradient-orange text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Unlimited Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-4xl mb-4">🚀</div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Unlimited Plan</h3>
+                            <p class="text-gray-600 mb-4">Get started with our comprehensive unlimited plan, perfect for growing businesses.</p>
+                            <div class="mb-4">
+                                <span class="text-4xl font-bold text-blue-500">$2,997</span>
+                                <div class="text-gray-600 mt-1">Setup + $997/MONTHLY</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">5-Page Website</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Everything in Growth+</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">AI ChatBot</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Ongoing SEO Updates</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Google and Facebook Ads Management</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span class="text-gray-600">Bi-Monthly Marketing Consultation Calls</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPayment('https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b')" class="w-full gradient-blue text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-8 text-left">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What's included in the setup fee?</h3>
+                    <p class="text-gray-600">The setup fee covers initial website development, CRM configuration, automation setup, and training for your team.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Can I upgrade or downgrade my plan?</h3>
+                    <p class="text-gray-600">Yes! You can change your plan at any time. We'll help you transition smoothly to ensure no disruption to your business.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Is there a long-term contract?</h3>
+                    <p class="text-gray-600">No long-term contracts required. We believe in earning your business every month through results and exceptional service.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What kind of support do you provide?</h3>
+                    <p class="text-gray-600">All plans include email support, training resources, and access to our knowledge base. Unlimited Plan includes bi-monthly consultation calls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="py-20 bg-gray-50" id="calendar">
+        <div class="max-w-800px mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Schedule a Free Demo</h2>
+            <p class="text-xl text-gray-600 mb-8">Use the calendar below to pick a time that works for you.</p>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <iframe src="https://api.leadconnectorhq.com/widget/booking/5Nd7nz3SkxkkLhuObvzL" style="width: 100%; border: none; overflow: hidden;" scrolling="no" id="5Nd7nz3SkxkkLhuObvzL_1751733972287"></iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openPayment(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

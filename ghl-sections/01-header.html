@@ -1,0 +1,103 @@
+<!-- HEADER SECTION - Add to GoHighLevel Header -->
+<style>
+  .ghl-header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+  }
+  
+  .ghl-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .ghl-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .ghl-nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ghl-nav-links a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .ghl-nav-links a:hover {
+    color: #2563eb;
+  }
+  
+  .ghl-book-call-btn {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  .ghl-book-call-btn:hover {
+    transform: translateY(-2px);
+    color: white !important;
+  }
+  
+  .ghl-mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2563eb;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .ghl-nav-links {
+      display: none;
+    }
+    
+    .ghl-mobile-menu {
+      display: block;
+    }
+    
+    .ghl-header-container {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<div class="ghl-header">
+  <div class="ghl-header-container">
+    <a href="#" class="ghl-logo">Smart Solution Agency</a>
+    
+    <nav>
+      <ul class="ghl-nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#calendar" class="ghl-book-call-btn">Book a Call</a></li>
+      </ul>
+    </nav>
+    
+    <button class="ghl-mobile-menu">☰</button>
+  </div>
+</div>

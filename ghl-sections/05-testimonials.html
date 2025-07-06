@@ -1,0 +1,144 @@
+<!-- TESTIMONIALS SECTION - Add as fourth section on Home page -->
+<style>
+  .ghl-testimonials {
+    padding: 5rem 2rem;
+    background: #f9fafb;
+  }
+  
+  .ghl-testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .ghl-testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .ghl-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .ghl-testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid #2563eb;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .ghl-quote-icon {
+    font-size: 3rem;
+    color: #2563eb;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+  
+  .ghl-testimonial-text {
+    font-style: italic;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .ghl-client-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .ghl-client-avatar {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .ghl-client-details {
+    flex: 1;
+  }
+  
+  .ghl-client-name {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+  
+  .ghl-client-business {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .ghl-testimonials {
+      padding: 3rem 1rem;
+    }
+    
+    .ghl-testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .ghl-testimonials-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<section class="ghl-testimonials">
+  <div class="ghl-testimonials-container">
+    <h2 class="ghl-testimonials-title">What Our Clients Say</h2>
+    
+    <div class="ghl-testimonials-grid">
+      <div class="ghl-testimonial-card">
+        <div class="ghl-quote-icon">"</div>
+        <p class="ghl-testimonial-text">"Smart Solution Agency transformed our lead generation completely. We went from struggling to find customers to having a steady stream of qualified leads every week. The automation saves us hours each day!"</p>
+        <div class="ghl-client-info">
+          <div class="ghl-client-avatar">MJ</div>
+          <div class="ghl-client-details">
+            <div class="ghl-client-name">Mike Johnson</div>
+            <div class="ghl-client-business">Johnson Roofing Services</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ghl-testimonial-card">
+        <div class="ghl-quote-icon">"</div>
+        <p class="ghl-testimonial-text">"The AI-powered CRM has been a game changer for our dental practice. Patient follow-ups are automatic, appointments stay filled, and our online reputation has never been better. Highly recommend!"</p>
+        <div class="ghl-client-info">
+          <div class="ghl-client-avatar">SW</div>
+          <div class="ghl-client-details">
+            <div class="ghl-client-name">Dr. Sarah Williams</div>
+            <div class="ghl-client-business">Bright Smile Dental</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ghl-testimonial-card">
+        <div class="ghl-quote-icon">"</div>
+        <p class="ghl-testimonial-text">"Working with Smart Solution Agency was the best business decision we made this year. Their automation systems helped us double our revenue while actually working fewer hours. The team is incredibly knowledgeable and supportive."</p>
+        <div class="ghl-client-info">
+          <div class="ghl-client-avatar">TC</div>
+          <div class="ghl-client-details">
+            <div class="ghl-client-name">Tom Chen</div>
+            <div class="ghl-client-business">Chen's Home Services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
