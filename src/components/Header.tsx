@@ -28,12 +28,12 @@ const Header = () => {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex-shrink-0 flex justify-center">
+          <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/a70a053a-2870-45a2-8700-234e7373e39f.png" 
                 alt="Smart Solution Agency" 
-                className="h-48 w-auto"
+                className="h-32 w-auto"
               />
             </Link>
           </div>
