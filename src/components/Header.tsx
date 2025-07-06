@@ -33,7 +33,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/a70a053a-2870-45a2-8700-234e7373e39f.png" 
                 alt="Smart Solution Agency" 
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
           </div>
