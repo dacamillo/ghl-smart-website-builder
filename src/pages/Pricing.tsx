@@ -61,6 +61,26 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      {/* Urgent Offer Banner */}
+      <section className="bg-red-600 text-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-yellow-400 text-red-900 px-4 py-2 rounded-full font-bold text-sm mb-2">
+              🔥 LIMITED TIME OFFER 🔥
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">
+              $100 MILLION OFFER: Setup Fee WAIVED!
+            </h2>
+            <p className="text-lg md:text-xl">
+              Schedule your appointment before <strong>January 15th, 2025</strong> and save up to $2,997 on setup fees!
+            </p>
+            <p className="text-sm mt-2 opacity-90">
+              ⏰ This exclusive offer expires soon - Don't miss out on thousands in savings!
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-primary to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Flexible Pricing Options to Suit Your Needs</h1>
