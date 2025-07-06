@@ -2,11 +2,12 @@
 <style>
   .ghl-contact {
     padding: 5rem 2rem;
-    background: #f9fafb;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
   }
   
   .ghl-contact-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
   }
@@ -14,15 +15,88 @@
   .ghl-contact-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1f2937;
+    color: white;
     margin-bottom: 1rem;
   }
   
   .ghl-contact-subtitle {
     font-size: 1.2rem;
-    color: #6b7280;
-    margin-bottom: 3rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 4rem;
     line-height: 1.6;
+  }
+  
+  .ghl-contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  
+  .ghl-contact-methods {
+    text-align: left;
+  }
+  
+  .ghl-methods-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .ghl-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .ghl-method-icon {
+    background: white;
+    color: #2563eb;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .ghl-method-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ghl-method-content p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .ghl-form-section {
+    text-align: left;
+  }
+  
+  .ghl-form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .ghl-form-subtitle {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
   }
   
   .ghl-contact-form {
@@ -45,33 +119,81 @@
     .ghl-contact-subtitle {
       font-size: 1.1rem;
     }
+    
+    .ghl-contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .ghl-contact-methods {
+      text-align: center;
+    }
+    
+    .ghl-form-section {
+      text-align: center;
+    }
   }
 </style>
 
 <section class="ghl-contact">
   <div class="ghl-contact-container">
     <h2 class="ghl-contact-title">Get In Touch</h2>
-    <p class="ghl-contact-subtitle">Questions? Ready to start? We're just a message away.</p>
+    <p class="ghl-contact-subtitle">Ready to transform your business with AI-powered automation? Let's talk about how we can help you grow.</p>
     
-    <div class="ghl-contact-form">
-      <iframe
-          src="https://api.leadconnectorhq.com/widget/form/PBxvJPVYQs60N8VLUgOr"
-          style="width:100%;height:100%;border:none;border-radius:4px"
-          id="inline-PBxvJPVYQs60N8VLUgOr" 
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Basic Contact Information"
-          data-height="552"
-          data-layout-iframe-id="inline-PBxvJPVYQs60N8VLUgOr"
-          data-form-id="PBxvJPVYQs60N8VLUgOr"
-          title="Basic Contact Information"
-              ></iframe>
-      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+    <div class="ghl-contact-content">
+      <div class="ghl-contact-methods">
+        <h3 class="ghl-methods-title">Multiple Ways to Connect</h3>
+        
+        <div class="ghl-method">
+          <div class="ghl-method-icon">📞</div>
+          <div class="ghl-method-content">
+            <h3>Phone Consultation</h3>
+            <p>Schedule a free 30-minute strategy call to discuss your business goals.</p>
+          </div>
+        </div>
+        
+        <div class="ghl-method">
+          <div class="ghl-method-icon">💬</div>
+          <div class="ghl-method-content">
+            <h3>Live Demo</h3>
+            <p>See our automation tools in action with a personalized demo.</p>
+          </div>
+        </div>
+        
+        <div class="ghl-method">
+          <div class="ghl-method-icon">💻</div>
+          <div class="ghl-method-content">
+            <h3>Quick Questions</h3>
+            <p>Send us a message and we'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ghl-form-section">
+        <h3 class="ghl-form-title">Get In Touch</h3>
+        <p class="ghl-form-subtitle">Questions? Ready to start? We're just a message away.</p>
+        
+        <div class="ghl-contact-form">
+          <iframe
+              src="https://api.leadconnectorhq.com/widget/form/PBxvJPVYQs60N8VLUgOr"
+              style="width:100%;height:100%;border:none;border-radius:4px"
+              id="inline-PBxvJPVYQs60N8VLUgOr" 
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Basic Contact Information"
+              data-height="552"
+              data-layout-iframe-id="inline-PBxvJPVYQs60N8VLUgOr"
+              data-form-id="PBxvJPVYQs60N8VLUgOr"
+              title="Basic Contact Information"
+                  ></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+      </div>
     </div>
   </div>
 </section>
