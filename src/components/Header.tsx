@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/home' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
     { name: 'Pricing', path: '/pricing' }
@@ -29,7 +29,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/home" className="flex items-center">
               <img 
                 src="/lovable-uploads/a70a053a-2870-45a2-8700-234e7373e39f.png" 
                 alt="Smart Solution Agency" 
