@@ -6,55 +6,95 @@ import Footer from "@/components/Footer";
 const Pricing = () => {
   const plans = [
     {
-      name: "Starter Plan",
+      name: "Starter Launch Plan",
       price: "$997",
       period: "Setup + $97/MONTHLY",
       icon: "🚀",
-      description: "Get started with our affordable Starter plan, perfect for basic website needs!",
+      description: "Everything you need to get found, capture leads, and start building your online reputation.",
       features: [
-        "3-Page Website",
-        "On-Page SEO",
-        "SMS and Email Automations",
-        "Missed Call Text Back",
-        "Lead Management App",
-        "Contact Form and Chat Widget"
+        "3-Page Mobile-Optimized Website",
+        "On-Page SEO (local keywords, meta tags)",
+        "Chat Widget & Contact Form",
+        "Missed Call Text Back Automation",
+        "Basic CRM (lead capture & tracking)",
+        "Google Analytics & Facebook Pixel Setup",
+        "Monthly Performance Report"
       ],
       color: "from-purple-500 to-pink-500",
       paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a4eeba110ff568d6234"
     },
     {
-      name: "Growth Plan",
-      price: "$1,997",
-      period: "Setup + $297/MONTHLY",
+      name: "Growth Essentials Plan",
+      price: "$1,497",
+      period: "Setup + $197/MONTHLY",
       icon: "🚀",
-      description: "Get started with premium features in our growth plan!",
+      description: "Automate your follow-up, build trust with reviews, and make it easy for customers to book and pay.",
       features: [
-        "4-Page Website",
-        "Everything in Starter+",
-        "Advanced SMS and Email Automations",
-        "Google Reviews Automation",
-        "Payment Processing",
-        "Calendar Booking System"
+        "5-Page Website (add Services, Testimonials)",
+        "Everything in Starter Launch+",
+        "Review Automation (Google reviews)",
+        "Advanced Nurture Flows (email/SMS)",
+        "Payment Processing Integration",
+        "Online Calendar & Booking System",
+        "Listings Management (30+ platforms)",
+        "Priority Email Support"
       ],
       color: "from-orange-500 to-red-500",
       popular: true,
       paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a1fd6ab80b40ee65d0f"
     },
     {
-      name: "Unlimited Plan",
-      price: "$2,997",
-      period: "Setup + $997/MONTHLY",
+      name: "Traffic & Content Accelerator",
+      price: "$2,497",
+      period: "Setup + $497/MONTHLY",
       icon: "🚀",
-      description: "Get started with our comprehensive unlimited plan, perfect for growing businesses.",
+      description: "Attract more visitors, keep your brand top-of-mind, and position yourself as the go-to expert.",
       features: [
-        "5-Page Website",
-        "Everything in Growth+",
-        "AI ChatBot",
-        "Ongoing SEO Updates",
-        "Google and Facebook Ads Management",
-        "Bi-Monthly Marketing Consultation Calls"
+        "Everything in Growth Essentials+",
+        "Social Media Planner & Automated Posting",
+        "Blog Syndication & Content Curation",
+        "Client Portal (secure communication hub)",
+        "Lead Magnet/Download Setup",
+        "Monthly SEO Blog Content",
+        "Quarterly Strategy Call"
       ],
       color: "from-blue-500 to-cyan-500",
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
+    },
+    {
+      name: "Elite Growth System",
+      price: "$3,497",
+      period: "Setup + $997/MONTHLY",
+      icon: "🚀",
+      description: "Accelerate your growth with paid ads, advanced analytics, and hands-on marketing support.",
+      features: [
+        "Everything in Traffic & Content+",
+        "Google & Facebook Ads Management",
+        "Advanced Reporting Dashboard",
+        "Bi-Weekly Marketing Consultation Calls",
+        "Custom Integrations (CRM, email, SMS)",
+        "Enhanced Security & Backups",
+        "Dedicated Account Manager"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
+    },
+    {
+      name: "Enterprise AI Suite",
+      price: "$4,997",
+      period: "Setup + $1,997/MONTHLY",
+      icon: "👨‍💼",
+      description: "Unlock the power of AI and automation to scale your business and dominate your market.",
+      features: [
+        "Everything in Elite Growth+",
+        "Full AI Employee (AI chatbot for sales)",
+        "CRM AI Assistant (automated data entry)",
+        "Advanced Automations (custom workflows)",
+        "Internal Training Portal",
+        "Multi-Location Management",
+        "VIP Support (phone, chat, priority)"
+      ],
+      color: "from-green-500 to-emerald-500",
       paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
     }
   ];
@@ -99,7 +139,7 @@ const Pricing = () => {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {plans.map((plan, index) => (
               <div
                 key={index}
