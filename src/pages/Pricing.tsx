@@ -158,10 +158,10 @@ const Pricing = () => {
                     <h3 className="text-2xl font-bold text-foreground mb-2 animate-fade-in">{plan.name}</h3>
                     <p className="text-muted-foreground mb-4 animate-slide-in-left">{plan.description}</p>
                     <div className="mb-4 animate-scale-in">
+                      <div className="text-sm text-muted-foreground mb-1">{plan.price} Setup</div>
                       <span className={`text-4xl font-bold bg-gradient-to-r ${plan.color} bg-clip-text text-transparent`}>
-                        {plan.price}
+                        {plan.period.split('+ ')[1]}
                       </span>
-                      <div className="text-muted-foreground mt-1">{plan.period}</div>
                     </div>
                   </div>
 
