@@ -1,10 +1,53 @@
 <!-- Pricing Section for GoHighLevel -->
-<script src="https://cdn.tailwindcss.com"></script>
 <style>
-    .gradient-text { background: linear-gradient(to right, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .gradient-orange { background: linear-gradient(to right, #f97316, #ef4444); }
-    .gradient-blue { background: linear-gradient(to right, #3b82f6, #06b6d4); }
-    .gradient-purple { background: linear-gradient(to right, #8b5cf6, #ec4899); }
+    .pricing-content { font-family: ui-sans-serif, system-ui, sans-serif; }
+    .pricing-content .gradient-text { background: linear-gradient(to right, #8b5cf6, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .pricing-content .gradient-orange { background: linear-gradient(to right, #f97316, #ef4444); }
+    .pricing-content .gradient-blue { background: linear-gradient(to right, #3b82f6, #06b6d4); }
+    .pricing-content .gradient-purple { background: linear-gradient(to right, #8b5cf6, #ec4899); }
+    .pricing-content .hero-section { padding: 5rem 0; background: linear-gradient(135deg, #2563eb, #7c3aed); color: white; }
+    .pricing-content .container { max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
+    .pricing-content .text-center { text-align: center; }
+    .pricing-content .hero-title { font-size: 3rem; font-weight: bold; margin-bottom: 1.5rem; }
+    .pricing-content .hero-subtitle { font-size: 1.25rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 64rem; margin-left: auto; margin-right: auto; }
+    .pricing-content .offer-banner { background: #dc2626; color: white; padding: 1rem 0; }
+    .pricing-content .offer-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: #fbbf24; color: #7f1d1d; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: bold; font-size: 0.875rem; margin-bottom: 0.5rem; }
+    .pricing-content .offer-title { font-size: 2rem; font-weight: bold; margin-bottom: 0.5rem; }
+    .pricing-content .offer-text { font-size: 1.125rem; margin-bottom: 1rem; }
+    .pricing-content .offer-button { background: #fbbf24; color: #7f1d1d; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: bold; font-size: 1.125rem; text-decoration: none; display: inline-block; margin-bottom: 0.75rem; transition: all 0.3s; }
+    .pricing-content .offer-button:hover { background: #f59e0b; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .pricing-content .pricing-section { padding: 5rem 0; background: #f9fafb; }
+    .pricing-content .card-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 42rem; margin: 0 auto; }
+    .pricing-content .pricing-card { background: white; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; transition: all 0.3s; }
+    .pricing-content .pricing-card:hover { transform: translateY(-8px); }
+    .pricing-content .popular-badge { background: #2563eb; color: white; text-align: center; padding: 0.5rem; font-size: 0.875rem; font-weight: 600; }
+    .pricing-content .card-content { padding: 2rem; }
+    .pricing-content .plan-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .pricing-content .plan-title { font-size: 1.5rem; font-weight: bold; color: #111827; margin-bottom: 0.5rem; }
+    .pricing-content .plan-desc { color: #6b7280; margin-bottom: 1rem; }
+    .pricing-content .plan-price { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    .pricing-content .plan-setup { font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem; }
+    .pricing-content .feature-list { list-style: none; padding: 0; margin: 0 0 2rem 0; }
+    .pricing-content .feature-item { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+    .pricing-content .feature-check { color: #10b981; font-weight: bold; }
+    .pricing-content .feature-text { color: #6b7280; }
+    .pricing-content .signup-button { width: 100%; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; border: none; cursor: pointer; transition: all 0.3s; }
+    .pricing-content .signup-button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .pricing-content .faq-section { padding: 5rem 0; background: white; }
+    .pricing-content .faq-title { font-size: 1.875rem; font-weight: bold; color: #111827; margin-bottom: 3rem; }
+    .pricing-content .faq-item { margin-bottom: 2rem; text-align: left; }
+    .pricing-content .faq-question { font-size: 1.25rem; font-weight: 600; color: #111827; margin-bottom: 0.75rem; }
+    .pricing-content .faq-answer { color: #6b7280; }
+    .pricing-content .calendar-section { padding: 5rem 0; background: #f9fafb; }
+    .pricing-content .calendar-title { font-size: 1.875rem; font-weight: bold; color: #111827; margin-bottom: 1rem; }
+    .pricing-content .calendar-desc { font-size: 1.25rem; color: #6b7280; margin-bottom: 2rem; }
+    .pricing-content .calendar-container { background: white; border-radius: 0.75rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; }
+    @media (min-width: 768px) {
+        .pricing-content .hero-title { font-size: 3.75rem; }
+        .pricing-content .hero-subtitle { font-size: 1.5rem; }
+        .pricing-content .offer-title { font-size: 1.875rem; }
+        .pricing-content .offer-text { font-size: 1.25rem; }
+    }
 </style>
 
 <div class="pricing-content">
