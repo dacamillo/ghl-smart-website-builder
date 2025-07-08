@@ -26,7 +26,7 @@ const Pricing = () => {
     {
       name: "Growth Essentials Plan",
       price: "$1,497",
-      period: "Setup + $197/MONTHLY",
+      period: "Setup + $297/MONTHLY",
       icon: "🚀",
       description: "Automate your follow-up, build trust with reviews, and make it easy for customers to book and pay.",
       features: [
