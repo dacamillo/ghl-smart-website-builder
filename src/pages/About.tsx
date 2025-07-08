@@ -186,8 +186,8 @@ const About = () => {
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">Save $500+ Monthly:</h4>
-                    <p className="text-sm">Most businesses save hundreds per month by consolidating their tech stack into GoHighLevel.</p>
+                    <h4 className="font-medium mb-2">Save $500+ Monthly & Generate $5k+ Revenue:</h4>
+                    <p className="text-sm">Most businesses save hundreds per month by consolidating their tech stack into GoHighLevel while generating significant new revenue through improved lead capture and automation.</p>
                   </div>
                 </div>
               </DialogContent>
