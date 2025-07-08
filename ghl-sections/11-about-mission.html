@@ -30,7 +30,7 @@
     line-height: 1.6;
   }
   
-  /* Interactive Trust Builders Grid */
+  /* Trust Builders Grid */
   .ghl-trust-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -42,11 +42,9 @@
     position: relative;
     padding: 2rem;
     border-radius: 1rem;
-    border: 2px solid transparent;
-    cursor: pointer;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
-    background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, var(--card-gradient-from), var(--card-gradient-to)) border-box;
   }
   
   .ghl-trust-card:hover {
@@ -54,66 +52,9 @@
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   }
   
-  .ghl-trust-card.experience {
-    --card-gradient-from: rgba(37, 99, 235, 0.1);
-    --card-gradient-to: rgba(124, 58, 237, 0.1);
-    border-color: rgba(37, 99, 235, 0.2);
-  }
-  
-  .ghl-trust-card.results {
-    --card-gradient-from: rgba(34, 197, 94, 0.1);
-    --card-gradient-to: rgba(5, 150, 105, 0.1);
-    border-color: rgba(34, 197, 94, 0.2);
-  }
-  
-  .ghl-trust-card.support {
-    --card-gradient-from: rgba(59, 130, 246, 0.1);
-    --card-gradient-to: rgba(6, 182, 212, 0.1);
-    border-color: rgba(59, 130, 246, 0.2);
-  }
-  
-  .ghl-trust-card.guarantee {
-    --card-gradient-from: rgba(168, 85, 247, 0.1);
-    --card-gradient-to: rgba(236, 72, 153, 0.1);
-    border-color: rgba(168, 85, 247, 0.2);
-  }
-  
-  .ghl-trust-card.process {
-    --card-gradient-from: rgba(249, 115, 22, 0.1);
-    --card-gradient-to: rgba(239, 68, 68, 0.1);
-    border-color: rgba(249, 115, 22, 0.2);
-  }
-  
-  .ghl-trust-card.team {
-    --card-gradient-from: rgba(20, 184, 166, 0.1);
-    --card-gradient-to: rgba(34, 197, 94, 0.1);
-    border-color: rgba(20, 184, 166, 0.2);
-  }
-  
-  .ghl-trust-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
   .ghl-trust-icon {
-    font-size: 2rem;
-  }
-  
-  .ghl-trust-badge {
-    background: #f3f4f6;
-    color: #6b7280;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-  
-  .ghl-trust-card:hover .ghl-trust-badge {
-    background: #2563eb;
-    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   
   .ghl-trust-title {
@@ -126,150 +67,6 @@
   .ghl-trust-description {
     color: #6b7280;
     line-height: 1.5;
-  }
-  
-  /* Modal Styles */
-  .ghl-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    animation: fadeIn 0.3s ease;
-  }
-  
-  .ghl-modal.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .ghl-modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 600px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideIn 0.3s ease;
-  }
-  
-  .ghl-modal-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .ghl-modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #6b7280;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background 0.3s ease;
-  }
-  
-  .ghl-modal-close:hover {
-    background: #f3f4f6;
-  }
-  
-  .ghl-stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  .ghl-stat-card {
-    background: #f0fdf4;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    text-align: center;
-  }
-  
-  .ghl-stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #15803d;
-  }
-  
-  .ghl-stat-label {
-    font-size: 0.8rem;
-    color: #166534;
-  }
-  
-  .ghl-feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-  }
-  
-  .ghl-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .ghl-highlight-box {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin: 1rem 0;
-  }
-  
-  .ghl-process-step {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .ghl-step-number {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-    margin-top: 0.25rem;
-  }
-  
-  .ghl-step-content h4 {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-  
-  .ghl-step-content p {
-    color: #6b7280;
-    font-size: 0.9rem;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes slideIn {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
   }
   
   @media (max-width: 768px) {
@@ -311,316 +108,113 @@
     </div>
     
     <div class="ghl-trust-grid">
-      <!-- GoHighLevel Platform Card -->
-      <div class="ghl-trust-card experience" onclick="openModal('experienceModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">🏆</div>
-          <div class="ghl-trust-badge">Click to learn more</div>
-        </div>
+      <!-- Enterprise-Grade Platform Card -->
+      <div class="ghl-trust-card experience">
+        <div class="ghl-trust-icon">🏆</div>
         <h3 class="ghl-trust-title">Enterprise-Grade Platform</h3>
-        <p class="ghl-trust-description">Built on GoHighLevel's proven technology</p>
+        <p class="ghl-trust-description">Built on proven technology trusted by thousands of successful agencies worldwide.</p>
+        <div style="margin-top: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: #10b981;">📈</span>
+            <span style="font-size: 0.875rem;">All-in-one CRM and automation</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: #8b5cf6;">🏆</span>
+            <span style="font-size: 0.875rem;">Enterprise-level security & 99.9% uptime</span>
+          </div>
+        </div>
       </div>
       
       <!-- Automation Features Card -->
-      <div class="ghl-trust-card results" onclick="openModal('resultsModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">📈</div>
-          <div class="ghl-trust-badge">See features</div>
-        </div>
+      <div class="ghl-trust-card results">
+        <div class="ghl-trust-icon">📈</div>
         <h3 class="ghl-trust-title">Smart Automation</h3>
-        <p class="ghl-trust-description">AI-powered workflows that work 24/7</p>
+        <p class="ghl-trust-description">AI-powered workflows that work 24/7 to capture and nurture leads automatically.</p>
+        <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div style="background: #f0fdf4; padding: 0.75rem; border-radius: 0.5rem; text-align: center;">
+            <div style="font-size: 1.25rem; font-weight: bold; color: #15803d;">24/7</div>
+            <div style="font-size: 0.75rem; color: #166534;">Lead capture</div>
+          </div>
+          <div style="background: #eff6ff; padding: 0.75rem; border-radius: 0.5rem; text-align: center;">
+            <div style="font-size: 1.25rem; font-weight: bold; color: #2563eb;">5min</div>
+            <div style="font-size: 0.75rem; color: #1d4ed8;">Response time</div>
+          </div>
+        </div>
       </div>
       
-      <!-- Support Card -->
-      <div class="ghl-trust-card support" onclick="openModal('supportModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">💙</div>
-          <div class="ghl-trust-badge">Learn more</div>
+      <!-- All-in-One Platform Card -->
+      <div class="ghl-trust-card support">
+        <div class="ghl-trust-icon">💙</div>
+        <h3 class="ghl-trust-title">All-in-One Platform</h3>
+        <p class="ghl-trust-description">Replace 5+ expensive tools with one powerful platform - no more juggling subscriptions.</p>
+        <div style="margin-top: 1rem;">
+          <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.1)); padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.875rem; font-weight: 500;">💰 Save $500+ Monthly</p>
+          </div>
+          <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(5, 150, 105, 0.1)); padding: 0.75rem; border-radius: 0.5rem;">
+            <p style="font-size: 0.875rem; font-weight: 500;">📈 Generate $5k+ Monthly Revenue</p>
+          </div>
         </div>
-        <h3 class="ghl-trust-title">24/7 Support</h3>
-        <p class="ghl-trust-description">We're here when you need us most</p>
       </div>
       
       <!-- Guarantee Card -->
-      <div class="ghl-trust-card guarantee" onclick="openModal('guaranteeModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">🛡️</div>
-          <div class="ghl-trust-badge">Our promise</div>
-        </div>
+      <div class="ghl-trust-card guarantee">
+        <div class="ghl-trust-icon">🛡️</div>
         <h3 class="ghl-trust-title">90-Day Guarantee</h3>
-        <p class="ghl-trust-description">Your success is guaranteed</p>
+        <p class="ghl-trust-description">If you don't see measurable improvements in your lead generation within 90 days, we'll refund every penny.</p>
+        <div style="margin-top: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: #10b981;">🛡️</span>
+            <span style="font-size: 0.875rem;">Zero financial risk</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: #8b5cf6;">💙</span>
+            <span style="font-size: 0.875rem;">Complete peace of mind</span>
+          </div>
+        </div>
       </div>
       
       <!-- Process Card -->
-      <div class="ghl-trust-card process" onclick="openModal('processModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">⏰</div>
-          <div class="ghl-trust-badge">See timeline</div>
+      <div class="ghl-trust-card process">
+        <div class="ghl-trust-icon">⏰</div>
+        <h3 class="ghl-trust-title">Quick Implementation</h3>
+        <p class="ghl-trust-description">Get up and running in just 30 days with our streamlined setup process and dedicated support team.</p>
+        <div style="margin-top: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="background: #2563eb; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">1</div>
+            <span style="font-size: 0.875rem;">Discovery & Strategy</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="background: #10b981; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">2</div>
+            <span style="font-size: 0.875rem;">Platform Setup</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div style="background: #8b5cf6; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">3</div>
+            <span style="font-size: 0.875rem;">Launch & Training</span>
+          </div>
         </div>
-        <h3 class="ghl-trust-title">Proven Process</h3>
-        <p class="ghl-trust-description">Step-by-step success methodology</p>
       </div>
       
       <!-- Team Card -->
-      <div class="ghl-trust-card team" onclick="openModal('teamModal')">
-        <div class="ghl-trust-header">
-          <div class="ghl-trust-icon">👥</div>
-          <div class="ghl-trust-badge">Meet the team</div>
+      <div class="ghl-trust-card team">
+        <div class="ghl-trust-icon">🤝</div>
+        <h3 class="ghl-trust-title">Dedicated Support</h3>
+        <p class="ghl-trust-description">We don't just set it up and leave. Our team provides continuous optimization and support.</p>
+        <div style="margin-top: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: #2563eb;">🏆</span>
+            <span style="font-size: 0.875rem;">Account Manager</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="color: #10b981;">📈</span>
+            <span style="font-size: 0.875rem;">Technical Specialist</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="color: #8b5cf6;">👥</span>
+            <span style="font-size: 0.875rem;">Strategy Consultant</span>
+          </div>
         </div>
-        <h3 class="ghl-trust-title">Expert Team</h3>
-        <p class="ghl-trust-description">Specialists in your corner</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- GoHighLevel Platform Modal -->
-<div id="experienceModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('experienceModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>🏆</span>
-      Powered by GoHighLevel
-    </div>
-    <p>We leverage GoHighLevel, the same platform trusted by thousands of successful agencies worldwide:</p>
-    <ul class="ghl-feature-list">
-      <li class="ghl-feature-item">
-        <span>📈</span>
-        <span>All-in-one CRM, marketing automation, and sales funnel builder</span>
-      </li>
-      <li class="ghl-feature-item">
-        <span>👥</span>
-        <span>Trusted by 1000+ agencies managing millions in client revenue</span>
-      </li>
-      <li class="ghl-feature-item">
-        <span>🏆</span>
-        <span>Enterprise-level security and 99.9% uptime reliability</span>
-      </li>
-    </ul>
-    <div class="ghl-highlight-box" style="margin-bottom: 1rem;">
-      <p><strong>💰 Save $500+ Monthly:</strong> Consolidate 5+ expensive tools into one powerful platform.</p>
-    </div>
-    <div class="ghl-highlight-box" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(5, 150, 105, 0.1));">
-      <p><strong>📈 Generate $5k+ Monthly Revenue:</strong> Advanced automation captures leads you're missing and converts them into paying customers 24/7.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Automation Features Modal -->
-<div id="resultsModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('resultsModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>📈</span>
-      Automation That Never Sleeps
-    </div>
-    <div class="ghl-stats-grid">
-      <div class="ghl-stat-card">
-        <div class="ghl-stat-number">24/7</div>
-        <div class="ghl-stat-label">Lead capture & follow-up</div>
-      </div>
-      <div class="ghl-stat-card">
-        <div class="ghl-stat-number">5min</div>
-        <div class="ghl-stat-label">Average response time</div>
-      </div>
-    </div>
-    <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-      <p style="font-weight: 600; margin-bottom: 0.5rem;">Lead Nurturing Sequences</p>
-      <p style="font-size: 0.9rem; color: #6b7280;">Automatically follow up with leads via email, SMS, and voicemail</p>
-    </div>
-    <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-      <p style="font-weight: 600; margin-bottom: 0.5rem;">Smart Appointment Booking</p>
-      <p style="font-size: 0.9rem; color: #6b7280;">Calendly-style booking that syncs with your calendar automatically</p>
-    </div>
-    <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0;">
-      <p style="font-weight: 600; margin-bottom: 0.5rem;">Pipeline Management</p>
-      <p style="font-size: 0.9rem; color: #6b7280;">Visual sales pipeline that moves prospects through your process</p>
-    </div>
-  </div>
-</div>
-
-<!-- Support Modal -->
-<div id="supportModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('supportModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>💙</span>
-      Support That Actually Cares
-    </div>
-    <p>Unlike other agencies that disappear after setup, we're your long-term partners:</p>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
-      <div style="background: #eff6ff; padding: 1rem; border-radius: 0.5rem;">
-        <div style="color: #2563eb; font-size: 1.5rem; margin-bottom: 0.5rem;">⏰</div>
-        <h4 style="font-weight: 600;">Response Time</h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Average 2-hour response on all support tickets</p>
-      </div>
-      <div style="background: #faf5ff; padding: 1rem; border-radius: 0.5rem;">
-        <div style="color: #7c3aed; font-size: 1.5rem; margin-bottom: 0.5rem;">👥</div>
-        <h4 style="font-weight: 600;">Dedicated Manager</h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Your own account manager who knows your business</p>
-      </div>
-    </div>
-    <div class="ghl-highlight-box">
-      <h4 style="font-weight: 600; margin-bottom: 0.5rem;">What's Included:</h4>
-      <ul style="font-size: 0.9rem; margin: 0; padding-left: 1rem;">
-        <li>Unlimited strategy calls</li>
-        <li>Monthly optimization reviews</li>
-        <li>Priority technical support</li>
-        <li>Free training for your team</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Guarantee Modal -->
-<div id="guaranteeModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('guaranteeModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>🛡️</span>
-      Risk-Free Guarantee
-    </div>
-    <div class="ghl-highlight-box" style="text-align: center;">
-      <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">90-Day Success Guarantee</h3>
-      <p>If you don't see measurable improvements in your lead generation and customer engagement within 90 days, we'll refund every penny.</p>
-    </div>
-    <h4 style="font-weight: 600; margin: 1rem 0 0.5rem 0;">What This Means For You:</h4>
-    <ul class="ghl-feature-list">
-      <li class="ghl-feature-item">
-        <span>🛡️</span>
-        <span>Zero financial risk on your investment</span>
-      </li>
-      <li class="ghl-feature-item">
-        <span>📈</span>
-        <span>We're incentivized to deliver real results, not just setup</span>
-      </li>
-      <li class="ghl-feature-item">
-        <span>💙</span>
-        <span>Complete peace of mind to focus on your business</span>
-      </li>
-    </ul>
-    <div style="background: #fefce8; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
-      <p style="font-size: 0.9rem;">
-        <strong>Note:</strong> In our 5+ years, we've only had 2 refund requests - and both were due to business model changes, not our performance.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Process Modal -->
-<div id="processModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('processModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>⏰</span>
-      Our Battle-Tested Process
-    </div>
-    <p>We've refined this process over 200+ successful implementations:</p>
-    <div style="margin: 1.5rem 0;">
-      <div class="ghl-process-step">
-        <div class="ghl-step-number" style="background: #2563eb;">1</div>
-        <div class="ghl-step-content">
-          <h4>Discovery & Strategy (Week 1)</h4>
-          <p>Deep dive into your business, goals, and current challenges</p>
-        </div>
-      </div>
-      <div class="ghl-process-step">
-        <div class="ghl-step-number" style="background: #16a34a;">2</div>
-        <div class="ghl-step-content">
-          <h4>Setup & Integration (Weeks 2-3)</h4>
-          <p>Build and configure your automation systems</p>
-        </div>
-      </div>
-      <div class="ghl-process-step">
-        <div class="ghl-step-number" style="background: #7c3aed;">3</div>
-        <div class="ghl-step-content">
-          <h4>Launch & Optimize (Week 4)</h4>
-          <p>Go live and monitor performance closely</p>
-        </div>
-      </div>
-      <div class="ghl-process-step">
-        <div class="ghl-step-number" style="background: #ea580c;">4</div>
-        <div class="ghl-step-content">
-          <h4>Scale & Support (Ongoing)</h4>
-          <p>Continuous optimization and growth strategies</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Team Modal -->
-<div id="teamModal" class="ghl-modal">
-  <div class="ghl-modal-content">
-    <button class="ghl-modal-close" onclick="closeModal('teamModal')">&times;</button>
-    <div class="ghl-modal-header">
-      <span>👥</span>
-      Your Success Team
-    </div>
-    <p>You're not just getting one person - you're getting an entire team of specialists:</p>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
-      <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
-        <h4 style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-          <span style="color: #2563eb;">🎯</span>
-          Strategy Director
-        </h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Designs your custom growth strategy</p>
-      </div>
-      <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
-        <h4 style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-          <span style="color: #16a34a;">📈</span>
-          Automation Specialist
-        </h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Builds and optimizes your systems</p>
-      </div>
-      <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
-        <h4 style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-          <span style="color: #7c3aed;">💙</span>
-          Account Manager
-        </h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Your dedicated point of contact</p>
-      </div>
-      <div style="background: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
-        <h4 style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
-          <span style="color: #ea580c;">🛡️</span>
-          Success Coach
-        </h4>
-        <p style="font-size: 0.9rem; color: #6b7280;">Ensures you hit your growth goals</p>
-      </div>
-    </div>
-    <div class="ghl-highlight-box">
-      <p style="font-size: 0.9rem;">
-        <strong>Combined Experience:</strong> Over 25 years in marketing automation, with certifications from every major platform including GoHighLevel, HubSpot, and Salesforce.
-      </p>
-    </div>
-  </div>
-</div>
-
-<script>
-function openModal(modalId) {
-  document.getElementById(modalId).classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('active');
-  document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking outside
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('ghl-modal')) {
-    closeModal(e.target.id);
-  }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const activeModal = document.querySelector('.ghl-modal.active');
-    if (activeModal) {
-      closeModal(activeModal.id);
-    }
-  }
-});
-</script>
