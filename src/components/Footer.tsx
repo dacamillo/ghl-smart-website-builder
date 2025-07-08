@@ -16,22 +16,27 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Section */}
           <div className="animate-slide-in-left">
-            <h3 className="text-primary text-2xl font-bold mb-4 animate-fade-in">Smart Solution Agency</h3>
+            <h3 className="text-primary text-2xl font-bold mb-4 animate-fade-in">Smart Solution Agency - Buffalo, NY</h3>
             <p className="text-gray-300 leading-relaxed mb-4 animate-fade-in-delay-1">
-              We help small businesses grow smarter, not harder, through AI-powered automation and marketing solutions. Transform your business operations and watch your revenue soar while you focus on what matters most.
+              Buffalo's premier marketing agency specializing in AI-powered automation and digital marketing solutions. We help local Buffalo businesses grow smarter, not harder.
             </p>
+            <div className="text-gray-300 text-sm space-y-1 animate-fade-in-delay-2">
+              <p><strong>📍 Buffalo, NY Location</strong></p>
+              <p>📞 Phone: (716) 555-0123</p>
+              <p>📧 Email: hello@smartsolutionagency.com</p>
+            </div>
           </div>
           
           {/* Quick Links */}
           <div className="animate-fade-in-up">
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Buffalo Marketing Services</h4>
             <ul className="space-y-2">
               <li className="animate-fade-in-delay-1">
                 <button
                   onClick={() => navigate('/')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  Home
+                  Marketing Agency Buffalo NY
                 </button>
               </li>
               <li className="animate-fade-in-delay-2">
@@ -39,7 +44,7 @@ const Footer = () => {
                   onClick={() => navigate('/pricing')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  Pricing
+                  Digital Marketing Buffalo
                 </button>
               </li>
               <li className="animate-fade-in-delay-3">
@@ -47,7 +52,7 @@ const Footer = () => {
                   onClick={() => navigate('/about')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  About
+                  Web Design Buffalo NY
                 </button>
               </li>
               <li className="animate-fade-in-delay-1">
@@ -55,15 +60,15 @@ const Footer = () => {
                   onClick={() => navigate('/contact')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  Contact
+                  SEO Buffalo NY
                 </button>
               </li>
               <li className="animate-fade-in-delay-2">
                 <button
-                  onClick={() => scrollToSection('calendar')}
+                  onClick={() => navigate('/contact')}
                   className="text-gray-300 hover:text-primary transition-colors duration-300 hover:animate-bounce-subtle"
                 >
-                  Book a Call
+                  Book Free Consultation
                 </button>
               </li>
             </ul>
@@ -87,7 +92,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 pt-8 text-center animate-fade-in">
           <p className="text-gray-400">
-            © 2024 Smart Solution Agency. All rights reserved.
+            © 2024 Smart Solution Agency - Buffalo, NY Marketing Agency. All rights reserved. | Serving Buffalo, Amherst, Cheektowaga, West Seneca, and Western New York
           </p>
         </div>
       </div>
