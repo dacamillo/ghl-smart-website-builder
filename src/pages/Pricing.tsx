@@ -122,7 +122,7 @@ const Pricing = () => {
               EXCLUSIVE OFFER: Setup Fee WAIVED!
             </h2>
             <p className="text-lg md:text-xl mb-4 animate-slide-in-left">
-              Schedule your appointment by <strong>11:59pm on {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</strong> and save up to $2,997 on setup fees!
+              Schedule your appointment by <strong>11:59pm on {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</strong> and save up to $4,997 on setup fees!
             </p>
             <Link 
               to="/contact#calendar"
