@@ -43,21 +43,63 @@
   
   .ghl-trust-card {
     position: relative;
-    padding: 2rem;
-    border-radius: 1rem;
-    background: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.1), 0 4px 15px -5px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  
+  .ghl-trust-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
   }
   
   .ghl-trust-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25), 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
   }
   
   .ghl-trust-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .ghl-trust-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .ghl-trust-card:hover .ghl-trust-icon::after {
+    opacity: 0.1;
+  }
+  
+  .ghl-trust-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    z-index: 1;
+    position: relative;
   }
   
   .ghl-trust-title {
@@ -69,7 +111,90 @@
   
   .ghl-trust-description {
     color: #6b7280;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ghl-features-list {
+    margin: 1.5rem 0;
+  }
+  
+  .ghl-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 0.5rem;
+    border-left: 3px solid #2563eb;
+  }
+  
+  .ghl-feature-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #2563eb;
+    flex-shrink: 0;
+  }
+  
+  .ghl-feature-text {
+    font-size: 0.875rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  
+  .ghl-learn-more-btn {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .ghl-learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  }
+  
+  .ghl-learn-more-btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .ghl-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  .ghl-stat-item {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.1));
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+  }
+  
+  .ghl-stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 0.25rem;
+  }
+  
+  .ghl-stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
   }
   
   @media (max-width: 768px) {
@@ -103,110 +228,296 @@
     <div class="ghl-trust-grid">
       <!-- Enterprise-Grade Platform Card -->
       <div class="ghl-trust-card experience">
-        <div class="ghl-trust-icon">🏆</div>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+        </div>
         <h3 class="ghl-trust-title">Enterprise-Grade Platform</h3>
-        <p class="ghl-trust-description">Built on proven technology trusted by thousands of successful agencies worldwide.</p>
-        <div style="margin-top: 1rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span style="color: #10b981;">📈</span>
-            <span style="font-size: 0.875rem;">All-in-one CRM and automation</span>
+        <p class="ghl-trust-description">Built on proven technology trusted by thousands of successful agencies worldwide, with enterprise-level security and reliability.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+            </svg>
+            <span class="ghl-feature-text">All-in-one CRM with advanced pipeline management</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: #8b5cf6;">🏆</span>
-            <span style="font-size: 0.875rem;">Enterprise-level security & 99.9% uptime</span>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            <span class="ghl-feature-text">Enterprise-level security & 99.9% uptime guarantee</span>
+          </div>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            <span class="ghl-feature-text">Lightning-fast performance with global CDN</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">99.9%</div>
+            <div class="ghl-stat-label">Uptime</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">10k+</div>
+            <div class="ghl-stat-label">Agencies</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
       
-      <!-- Automation Features Card -->
+      <!-- Smart Automation Card -->
       <div class="ghl-trust-card results">
-        <div class="ghl-trust-icon">📈</div>
-        <h3 class="ghl-trust-title">Smart Automation</h3>
-        <p class="ghl-trust-description">AI-powered workflows that work 24/7 to capture and nurture leads automatically.</p>
-        <div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-          <div style="background: #f0fdf4; padding: 0.75rem; border-radius: 0.5rem; text-align: center;">
-            <div style="font-size: 1.25rem; font-weight: bold; color: #15803d;">24/7</div>
-            <div style="font-size: 0.75rem; color: #166534;">Lead capture</div>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+          </svg>
+        </div>
+        <h3 class="ghl-trust-title">AI-Powered Automation</h3>
+        <p class="ghl-trust-description">Advanced AI workflows that work 24/7 to capture, qualify, and nurture leads automatically, turning prospects into customers while you sleep.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="ghl-feature-text">24/7 automated lead capture and qualification</span>
           </div>
-          <div style="background: #eff6ff; padding: 0.75rem; border-radius: 0.5rem; text-align: center;">
-            <div style="font-size: 1.25rem; font-weight: bold; color: #2563eb;">5min</div>
-            <div style="font-size: 0.75rem; color: #1d4ed8;">Response time</div>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            <span class="ghl-feature-text">Instant response within 5 minutes</span>
+          </div>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+            </svg>
+            <span class="ghl-feature-text">Smart personalized follow-up sequences</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">300%</div>
+            <div class="ghl-stat-label">More Leads</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">85%</div>
+            <div class="ghl-stat-label">Time Saved</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
       
       <!-- All-in-One Platform Card -->
       <div class="ghl-trust-card support">
-        <div class="ghl-trust-icon">💙</div>
-        <h3 class="ghl-trust-title">All-in-One Platform</h3>
-        <p class="ghl-trust-description">Replace 5+ expensive tools with one powerful platform - no more juggling subscriptions.</p>
-        <div style="margin-top: 1rem;">
-          <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.1)); padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.5rem;">
-            <p style="font-size: 0.875rem; font-weight: 500;">💰 Save $500+ Monthly</p>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m-15 0A2.25 2.25 0 005.25 12v6.75A2.25 2.25 0 007.5 21h9a2.25 2.25 0 002.25-2.25V12a2.25 2.25 0 00-.75-2.122m0 0A2.25 2.25 0 0016.5 9.75V9" />
+          </svg>
+        </div>
+        <h3 class="ghl-trust-title">Complete Marketing Suite</h3>
+        <p class="ghl-trust-description">Replace 5+ expensive tools with one powerful platform. CRM, email marketing, SMS, landing pages, funnels, calendar booking, and more - all integrated seamlessly.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="ghl-feature-text">Save $500+ monthly on software subscriptions</span>
           </div>
-          <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(5, 150, 105, 0.1)); padding: 0.75rem; border-radius: 0.5rem;">
-            <p style="font-size: 0.875rem; font-weight: 500;">📈 Generate $5k+ Monthly Revenue</p>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+            </svg>
+            <span class="ghl-feature-text">Seamless integrations with 1000+ tools</span>
+          </div>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+            </svg>
+            <span class="ghl-feature-text">Generate $5k+ additional monthly revenue</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">15+</div>
+            <div class="ghl-stat-label">Tools Replaced</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">$500+</div>
+            <div class="ghl-stat-label">Monthly Savings</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
       
-      <!-- Guarantee Card -->
+      <!-- Money-Back Guarantee Card -->
       <div class="ghl-trust-card guarantee">
-        <div class="ghl-trust-icon">🛡️</div>
-        <h3 class="ghl-trust-title">90-Day Guarantee</h3>
-        <p class="ghl-trust-description">If you don't see measurable improvements in your lead generation within 90 days, we'll refund every penny.</p>
-        <div style="margin-top: 1rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span style="color: #10b981;">🛡️</span>
-            <span style="font-size: 0.875rem;">Zero financial risk</span>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+        </div>
+        <h3 class="ghl-trust-title">90-Day Money-Back Guarantee</h3>
+        <p class="ghl-trust-description">We're so confident in our platform that we offer a full 90-day money-back guarantee. If you don't see measurable improvements in your lead generation, we'll refund every penny.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            <span class="ghl-feature-text">Zero financial risk - 100% money back</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: #8b5cf6;">💙</span>
-            <span style="font-size: 0.875rem;">Complete peace of mind</span>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+            </svg>
+            <span class="ghl-feature-text">Complete peace of mind guarantee</span>
+          </div>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="ghl-feature-text">90 full days to see results</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">98%</div>
+            <div class="ghl-stat-label">Success Rate</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">&lt;2%</div>
+            <div class="ghl-stat-label">Refund Rate</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
       
-      <!-- Process Card -->
+      <!-- Quick Implementation Card -->
       <div class="ghl-trust-card process">
-        <div class="ghl-trust-icon">⏰</div>
-        <h3 class="ghl-trust-title">Quick Implementation</h3>
-        <p class="ghl-trust-description">Get up and running in just 30 days with our streamlined setup process and dedicated support team.</p>
-        <div style="margin-top: 1rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <div style="background: #2563eb; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">1</div>
-            <span style="font-size: 0.875rem;">Discovery & Strategy</span>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+          </svg>
+        </div>
+        <h3 class="ghl-trust-title">Lightning-Fast Implementation</h3>
+        <p class="ghl-trust-description">Get up and running in just 30 days with our proven 3-step implementation process. No technical headaches, no long delays - just results.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <div style="background: #2563eb; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; flex-shrink: 0;">1</div>
+            <span class="ghl-feature-text">Discovery call & strategy planning (Week 1)</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <div style="background: #10b981; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">2</div>
-            <span style="font-size: 0.875rem;">Platform Setup</span>
+          <div class="ghl-feature-item">
+            <div style="background: #10b981; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; flex-shrink: 0;">2</div>
+            <span class="ghl-feature-text">Platform setup & customization (Week 2-3)</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <div style="background: #8b5cf6; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">3</div>
-            <span style="font-size: 0.875rem;">Launch & Training</span>
+          <div class="ghl-feature-item">
+            <div style="background: #8b5cf6; color: white; border-radius: 50%; width: 1.5rem; height: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; flex-shrink: 0;">3</div>
+            <span class="ghl-feature-text">Launch, training & optimization (Week 4)</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">30</div>
+            <div class="ghl-stat-label">Days Setup</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">24/7</div>
+            <div class="ghl-stat-label">Support</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
       
-      <!-- Team Card -->
+      <!-- Dedicated Expert Team Card -->
       <div class="ghl-trust-card team">
-        <div class="ghl-trust-icon">🤝</div>
-        <h3 class="ghl-trust-title">Dedicated Support</h3>
-        <p class="ghl-trust-description">We don't just set it up and leave. Our team provides continuous optimization and support.</p>
-        <div style="margin-top: 1rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span style="color: #2563eb;">🏆</span>
-            <span style="font-size: 0.875rem;">Account Manager</span>
+        <div class="ghl-trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+          </svg>
+        </div>
+        <h3 class="ghl-trust-title">Dedicated Expert Team</h3>
+        <p class="ghl-trust-description">You're not just getting software - you're getting a dedicated team of marketing automation experts who ensure your success every step of the way.</p>
+        
+        <div class="ghl-features-list">
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+            <span class="ghl-feature-text">Personal account manager for strategic guidance</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-            <span style="color: #10b981;">📈</span>
-            <span style="font-size: 0.875rem;">Technical Specialist</span>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+            </svg>
+            <span class="ghl-feature-text">Technical specialist for platform optimization</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: #8b5cf6;">👥</span>
-            <span style="font-size: 0.875rem;">Strategy Consultant</span>
+          <div class="ghl-feature-item">
+            <svg class="ghl-feature-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m4.5 0a12.06 12.06 0 00-4.5 0m4.5 0a12.06 12.06 0 010-4.5m0 4.5a12.06 12.06 0 010-4.5m0 4.5v.75m-4.5-.75v.75m4.5-.75a12.06 12.06 0 00-4.5 0m4.5 0a12.06 12.06 0 00-4.5 0m0-5.25a6.01 6.01 0 019-5.25m-9 5.25a6.01 6.01 0 01-9-5.25m9 5.25v.75m0-.75a6.01 6.01 0 019-5.25m-9 5.25a6.01 6.01 0 01-9-5.25m9 5.25V12m0 0a6.01 6.01 0 019-5.25M12 12a6.01 6.01 0 01-9-5.25M12 12v.75" />
+            </svg>
+            <span class="ghl-feature-text">Strategy consultant for growth optimization</span>
           </div>
         </div>
+        
+        <div class="ghl-stats-grid">
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">3</div>
+            <div class="ghl-stat-label">Team Members</div>
+          </div>
+          <div class="ghl-stat-item">
+            <div class="ghl-stat-number">24/7</div>
+            <div class="ghl-stat-label">Available</div>
+          </div>
+        </div>
+        
+        <button class="ghl-learn-more-btn" onclick="window.location.href='/contact'">
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
