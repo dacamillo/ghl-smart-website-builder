@@ -40,7 +40,7 @@ const About = () => {
           {/* Interactive Trust Builders */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            {/* Experience Pop-up */}
+            {/* GoHighLevel Platform Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-primary/5 to-purple-600/5 p-8 rounded-xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
@@ -50,95 +50,95 @@ const About = () => {
                       Click to learn more
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">5+ Years Experience</h3>
-                  <p className="text-muted-foreground">Proven track record in marketing automation</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Enterprise-Grade Platform</h3>
+                  <p className="text-muted-foreground">Built on GoHighLevel's proven technology</p>
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <Award className="h-6 w-6 text-primary" />
-                    Our Proven Experience
+                    Powered by GoHighLevel
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    We've been in the trenches with businesses just like yours since 2019. Our team has:
+                    We leverage GoHighLevel, the same platform trusted by thousands of successful agencies worldwide:
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <TrendingUp className="h-5 w-5 text-green-500 mt-0.5" />
-                      <span>Helped over 200+ businesses increase their revenue by an average of 40%</span>
+                      <span>All-in-one CRM, marketing automation, and sales funnel builder</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Users className="h-5 w-5 text-blue-500 mt-0.5" />
-                      <span>Managed marketing campaigns generating over $50M in client revenue</span>
+                      <span>Trusted by 1000+ agencies managing millions in client revenue</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Award className="h-5 w-5 text-purple-500 mt-0.5" />
-                      <span>Certified experts in GoHighLevel, HubSpot, and leading automation platforms</span>
+                      <span>Enterprise-level security and 99.9% uptime reliability</span>
                     </li>
                   </ul>
                   <div className="bg-gradient-to-r from-primary/10 to-purple-600/10 p-4 rounded-lg">
                     <p className="text-sm font-medium">
-                      "We don't just implement systems - we become your growth partners with skin in the game."
+                      "You get the power of a Fortune 500 marketing stack at a fraction of the cost."
                     </p>
                   </div>
                 </div>
               </DialogContent>
             </Dialog>
 
-            {/* Results Pop-up */}
+            {/* Automation Features Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-green-500/5 to-emerald-600/5 p-8 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <TrendingUp className="h-8 w-8 text-green-500" />
                     <Badge variant="secondary" className="group-hover:bg-green-500 group-hover:text-white transition-colors">
-                      See results
+                      See features
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Average 3x ROI</h3>
-                  <p className="text-muted-foreground">Real results from real businesses</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Smart Automation</h3>
+                  <p className="text-muted-foreground">AI-powered workflows that work 24/7</p>
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <TrendingUp className="h-6 w-6 text-green-500" />
-                    Results That Speak For Themselves
+                    Automation That Never Sleeps
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-green-600">340%</div>
-                      <div className="text-sm text-green-700">Average ROI</div>
+                      <div className="text-3xl font-bold text-green-600">24/7</div>
+                      <div className="text-sm text-green-700">Lead capture & follow-up</div>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-blue-600">15-30</div>
-                      <div className="text-sm text-blue-700">Days to see results</div>
+                      <div className="text-3xl font-bold text-blue-600">5min</div>
+                      <div className="text-sm text-blue-700">Average response time</div>
                     </div>
                   </div>
                   <div className="space-y-3">
                     <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="font-medium">Local Service Business</p>
-                      <p className="text-sm text-muted-foreground">Went from 5 leads/month to 45+ leads/month in 60 days</p>
+                      <p className="font-medium">Lead Nurturing Sequences</p>
+                      <p className="text-sm text-muted-foreground">Automatically follow up with leads via email, SMS, and voicemail</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="font-medium">E-commerce Store</p>
-                      <p className="text-sm text-muted-foreground">Increased customer lifetime value by 85% with automated sequences</p>
+                      <p className="font-medium">Smart Appointment Booking</p>
+                      <p className="text-sm text-muted-foreground">Calendly-style booking that syncs with your calendar automatically</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="font-medium">Professional Services</p>
-                      <p className="text-sm text-muted-foreground">Reduced time spent on follow-ups by 12 hours/week</p>
+                      <p className="font-medium">Pipeline Management</p>
+                      <p className="text-sm text-muted-foreground">Visual sales pipeline that moves prospects through your process</p>
                     </div>
                   </div>
                 </div>
               </DialogContent>
             </Dialog>
 
-            {/* Support Pop-up */}
+            {/* All-in-One Platform Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-blue-500/5 to-cyan-600/5 p-8 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg">
@@ -148,47 +148,52 @@ const About = () => {
                       Learn more
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">24/7 Support</h3>
-                  <p className="text-muted-foreground">We're here when you need us most</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">All-in-One Platform</h3>
+                  <p className="text-muted-foreground">Everything you need in one place</p>
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <Heart className="h-6 w-6 text-blue-500" />
-                    Support That Actually Cares
+                    Replace 5+ Tools with One Platform
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    Unlike other agencies that disappear after setup, we're your long-term partners:
+                    Stop juggling multiple subscriptions and complicated integrations:
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <Clock className="h-6 w-6 text-blue-500 mb-2" />
-                      <h4 className="font-medium">Response Time</h4>
-                      <p className="text-sm text-muted-foreground">Average 2-hour response on all support tickets</p>
+                      <h4 className="font-medium">CRM & Pipeline</h4>
+                      <p className="text-sm text-muted-foreground">Replace Salesforce, HubSpot, or Pipedrive</p>
                     </div>
                     <div className="bg-purple-50 p-4 rounded-lg">
                       <Users className="h-6 w-6 text-purple-500 mb-2" />
-                      <h4 className="font-medium">Dedicated Manager</h4>
-                      <p className="text-sm text-muted-foreground">Your own account manager who knows your business</p>
+                      <h4 className="font-medium">Email & SMS Marketing</h4>
+                      <p className="text-sm text-muted-foreground">Replace Mailchimp, Constant Contact</p>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <TrendingUp className="h-6 w-6 text-green-500 mb-2" />
+                      <h4 className="font-medium">Appointment Booking</h4>
+                      <p className="text-sm text-muted-foreground">Replace Calendly, Acuity Scheduling</p>
+                    </div>
+                    <div className="bg-orange-50 p-4 rounded-lg">
+                      <Award className="h-6 w-6 text-orange-500 mb-2" />
+                      <h4 className="font-medium">Website & Funnels</h4>
+                      <p className="text-sm text-muted-foreground">Replace ClickFunnels, WordPress</p>
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">What's Included:</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• Unlimited strategy calls</li>
-                      <li>• Monthly optimization reviews</li>
-                      <li>• Priority technical support</li>
-                      <li>• Free training for your team</li>
-                    </ul>
+                    <h4 className="font-medium mb-2">Save $500+ Monthly:</h4>
+                    <p className="text-sm">Most businesses save hundreds per month by consolidating their tech stack into GoHighLevel.</p>
                   </div>
                 </div>
               </DialogContent>
             </Dialog>
 
-            {/* Guarantee Pop-up */}
+            {/* Money-Back Guarantee Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-purple-500/5 to-pink-600/5 p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg">
@@ -206,18 +211,18 @@ const About = () => {
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <Shield className="h-6 w-6 text-purple-500" />
-                    Risk-Free Guarantee
+                    Risk-Free Implementation
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <div className="bg-gradient-to-r from-purple-500/10 to-pink-600/10 p-6 rounded-lg text-center">
-                    <h3 className="text-xl font-bold mb-2">90-Day Success Guarantee</h3>
+                    <h3 className="text-xl font-bold mb-2">90-Day Money-Back Guarantee</h3>
                     <p className="text-muted-foreground">
-                      If you don't see measurable improvements in your lead generation and customer engagement within 90 days, we'll refund every penny.
+                      If you don't see measurable improvements in your lead generation within 90 days, we'll refund your entire investment.
                     </p>
                   </div>
                   <div className="space-y-3">
-                    <h4 className="font-medium">What This Means For You:</h4>
+                    <h4 className="font-medium">What This Means:</h4>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
                         <Shield className="h-5 w-5 text-green-500 mt-0.5" />
@@ -225,24 +230,19 @@ const About = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <TrendingUp className="h-5 w-5 text-blue-500 mt-0.5" />
-                        <span>We're incentivized to deliver real results, not just setup</span>
+                        <span>We're committed to your success, not just setup</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Heart className="h-5 w-5 text-purple-500 mt-0.5" />
-                        <span>Complete peace of mind to focus on your business</span>
+                        <span>Complete peace of mind to try our services</span>
                       </li>
                     </ul>
-                  </div>
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <p className="text-sm">
-                      <strong>Note:</strong> In our 5+ years, we've only had 2 refund requests - and both were due to business model changes, not our performance.
-                    </p>
                   </div>
                 </div>
               </DialogContent>
             </Dialog>
 
-            {/* Process Pop-up */}
+            {/* Implementation Process Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-orange-500/5 to-red-600/5 p-8 rounded-xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-lg">
@@ -252,48 +252,48 @@ const About = () => {
                       See timeline
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Proven Process</h3>
-                  <p className="text-muted-foreground">Step-by-step success methodology</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Quick Implementation</h3>
+                  <p className="text-muted-foreground">Up and running in 30 days</p>
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <Clock className="h-6 w-6 text-orange-500" />
-                    Our Battle-Tested Process
+                    Fast-Track Your Growth
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    We've refined this process over 200+ successful implementations:
+                    Our streamlined process gets you generating leads fast:
                   </p>
                   <div className="space-y-4">
                     <div className="flex gap-4">
                       <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">1</div>
                       <div>
-                        <h4 className="font-medium">Discovery & Strategy (Week 1)</h4>
-                        <p className="text-sm text-muted-foreground">Deep dive into your business, goals, and current challenges</p>
+                        <h4 className="font-medium">Discovery Call (Day 1)</h4>
+                        <p className="text-sm text-muted-foreground">Understand your business and goals</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">2</div>
                       <div>
-                        <h4 className="font-medium">Setup & Integration (Weeks 2-3)</h4>
-                        <p className="text-sm text-muted-foreground">Build and configure your automation systems</p>
+                        <h4 className="font-medium">Platform Setup (Week 1-2)</h4>
+                        <p className="text-sm text-muted-foreground">Configure CRM, automations, and integrations</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">3</div>
                       <div>
-                        <h4 className="font-medium">Launch & Optimize (Week 4)</h4>
-                        <p className="text-sm text-muted-foreground">Go live and monitor performance closely</p>
+                        <h4 className="font-medium">Content Creation (Week 3)</h4>
+                        <p className="text-sm text-muted-foreground">Build landing pages and email sequences</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">4</div>
                       <div>
-                        <h4 className="font-medium">Scale & Support (Ongoing)</h4>
-                        <p className="text-sm text-muted-foreground">Continuous optimization and growth strategies</p>
+                        <h4 className="font-medium">Launch & Training (Week 4)</h4>
+                        <p className="text-sm text-muted-foreground">Go live and train your team</p>
                       </div>
                     </div>
                   </div>
@@ -301,65 +301,69 @@ const About = () => {
               </DialogContent>
             </Dialog>
 
-            {/* Team Pop-up */}
+            {/* Dedicated Support Pop-up */}
             <Dialog>
               <DialogTrigger asChild>
                 <div className="group cursor-pointer bg-gradient-to-br from-teal-500/5 to-green-600/5 p-8 rounded-xl border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <Users className="h-8 w-8 text-teal-500" />
                     <Badge variant="secondary" className="group-hover:bg-teal-500 group-hover:text-white transition-colors">
-                      Meet the team
+                      Learn more
                     </Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Expert Team</h3>
-                  <p className="text-muted-foreground">Specialists in your corner</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">Dedicated Support</h3>
+                  <p className="text-muted-foreground">Your success partner</p>
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <Users className="h-6 w-6 text-teal-500" />
-                    Your Success Team
+                    Support When You Need It
                   </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    You're not just getting one person - you're getting an entire team of specialists:
+                    Unlike DIY platforms, you get real human support:
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h4 className="font-medium flex items-center gap-2">
                         <Award className="h-4 w-4 text-blue-500" />
-                        Strategy Director
-                      </h4>
-                      <p className="text-sm text-muted-foreground">Designs your custom growth strategy</p>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-medium flex items-center gap-2">
-                        <TrendingUp className="h-4 w-4 text-green-500" />
-                        Automation Specialist
-                      </h4>
-                      <p className="text-sm text-muted-foreground">Builds and optimizes your systems</p>
-                    </div>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-medium flex items-center gap-2">
-                        <Heart className="h-4 w-4 text-purple-500" />
                         Account Manager
                       </h4>
                       <p className="text-sm text-muted-foreground">Your dedicated point of contact</p>
                     </div>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <h4 className="font-medium flex items-center gap-2">
-                        <Shield className="h-4 w-4 text-orange-500" />
-                        Success Coach
+                        <TrendingUp className="h-4 w-4 text-green-500" />
+                        Technical Specialist
                       </h4>
-                      <p className="text-sm text-muted-foreground">Ensures you hit your growth goals</p>
+                      <p className="text-sm text-muted-foreground">Handles all the technical setup</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-medium flex items-center gap-2">
+                        <Heart className="h-4 w-4 text-purple-500" />
+                        Strategy Consultant
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Optimizes your growth strategy</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-medium flex items-center gap-2">
+                        <Shield className="h-4 w-4 text-orange-500" />
+                        Training Specialist
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Teaches your team to use everything</p>
                     </div>
                   </div>
                   <div className="bg-gradient-to-r from-teal-500/10 to-green-600/10 p-4 rounded-lg">
-                    <p className="text-sm">
-                      <strong>Combined Experience:</strong> Over 25 years in marketing automation, with certifications from every major platform including GoHighLevel, HubSpot, and Salesforce.
-                    </p>
+                    <h4 className="font-medium mb-2">What's Included:</h4>
+                    <ul className="text-sm space-y-1">
+                      <li>• Unlimited support tickets</li>
+                      <li>• Monthly strategy calls</li>
+                      <li>• Performance optimization</li>
+                      <li>• Platform training sessions</li>
+                    </ul>
                   </div>
                 </div>
               </DialogContent>
