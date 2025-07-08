@@ -185,9 +185,13 @@ const About = () => {
                       <p className="text-sm text-muted-foreground">Replace ClickFunnels, WordPress</p>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">Save $500+ Monthly & Generate $5k+ Revenue:</h4>
-                    <p className="text-sm">Most businesses save hundreds per month by consolidating their tech stack into GoHighLevel while generating significant new revenue through improved lead capture and automation.</p>
+                  <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 p-4 rounded-lg mb-3">
+                    <h4 className="font-medium mb-2">💰 Save $500+ Monthly:</h4>
+                    <p className="text-sm">Consolidate 5+ expensive tools into one powerful platform.</p>
+                  </div>
+                  <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 p-4 rounded-lg">
+                    <h4 className="font-medium mb-2">📈 Generate $5k+ Monthly Revenue:</h4>
+                    <p className="text-sm">Advanced automation captures leads you're missing and converts them into paying customers 24/7.</p>
                   </div>
                 </div>
               </DialogContent>
