@@ -21,7 +21,7 @@ const Pricing = () => {
         "Monthly Performance Report"
       ],
       color: "from-purple-500 to-pink-500",
-      paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a4eeba110ff568d6234"
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686c8345eba11033ff8d6d8f"
     },
     {
       name: "Growth Essentials Plan",
@@ -41,7 +41,7 @@ const Pricing = () => {
       ],
       color: "from-orange-500 to-red-500",
       popular: true,
-      paymentUrl: "https://link.fastpaydirect.com/payment-link/68697a1fd6ab80b40ee65d0f"
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686c8381ddc6a602c6c512fb"
     },
     {
       name: "Traffic & Content Accelerator",
@@ -59,7 +59,7 @@ const Pricing = () => {
         "Quarterly Strategy Call"
       ],
       color: "from-blue-500 to-cyan-500",
-      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686c83b4d6ab805956e66818"
     },
     {
       name: "Elite Growth System",
@@ -77,7 +77,7 @@ const Pricing = () => {
         "Dedicated Account Manager"
       ],
       color: "from-indigo-500 to-purple-500",
-      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686c840ad6ab808903e6681c"
     },
     {
       name: "Enterprise AI Suite",
@@ -95,7 +95,7 @@ const Pricing = () => {
         "VIP Support (phone, chat, priority)"
       ],
       color: "from-green-500 to-emerald-500",
-      paymentUrl: "https://link.fastpaydirect.com/payment-link/686979feddc6a6e8a6c5077b"
+      paymentUrl: "https://link.fastpaydirect.com/payment-link/686c8437ddc6a65071c512fd"
     }
   ];
 
