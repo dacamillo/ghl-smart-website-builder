@@ -74,12 +74,26 @@
       display: none;
     }
     
+    .ghl-nav-links.mobile-open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+    
     .ghl-mobile-menu {
       display: block;
     }
     
     .ghl-header-container {
       padding: 1rem;
+      position: relative;
     }
   }
 </style>
@@ -91,7 +105,7 @@
     </a>
     
     <nav>
-      <ul class="ghl-nav-links">
+      <ul class="ghl-nav-links" id="ghl-nav-menu">
         <li><a href="/home">Home</a></li>
         <li><a href="/pricing">Pricing</a></li>
         <li><a href="/about">About</a></li>
@@ -100,6 +114,13 @@
       </ul>
     </nav>
     
-    <button class="ghl-mobile-menu">☰</button>
+    <button class="ghl-mobile-menu" onclick="toggleMobileMenu()">☰</button>
   </div>
 </div>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById('ghl-nav-menu');
+  menu.classList.toggle('mobile-open');
+}
+</script>
