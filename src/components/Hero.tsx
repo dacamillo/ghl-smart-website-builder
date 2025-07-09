@@ -8,10 +8,10 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
-            Buffalo's Leading Marketing Agency
+            Smarter Marketing. Simplified Growth.
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 leading-relaxed animate-fade-in-up-delay-1">
-            Top-rated digital marketing agency in Buffalo, NY. We help local businesses grow with AI-powered automation, web design, and SEO services.
+            We use AI & automation to help small businesses grow faster without working harder.
           </p>
           <button
             onClick={scrollToCalendar}

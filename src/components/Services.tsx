@@ -8,8 +8,8 @@ const Services = () => {
   const services = [
     {
       icon: "🤖",
-      title: "AI-Powered CRM for Buffalo",
-      description: "Smart customer relationship management designed for Buffalo businesses that learns and adapts to your local market needs.",
+      title: "AI-Powered CRM",
+      description: "Smart customer relationship management that learns and adapts to your business needs.",
       problem: "Most small businesses lose track of leads, forget to follow up, and miss opportunities because they're managing everything manually.",
       solution: "Our AI-powered CRM automatically tracks every interaction, scores leads by likelihood to convert, and reminds you exactly when and how to follow up.",
       results: [
@@ -22,8 +22,8 @@ const Services = () => {
     },
     {
       icon: "👥",
-      title: "Website Design Buffalo NY",
-      description: "High-converting websites and funnels specifically designed for Buffalo businesses to capture more local leads.",
+      title: "Lead Capture Funnels",
+      description: "High-converting funnels that turn visitors into qualified leads automatically.",
       problem: "Your website visitors leave without giving you their contact information, and you have no way to re-engage them.",
       solution: "We build high-converting landing pages and funnels that capture leads with irresistible offers and automatically nurture them into paying customers.",
       results: [
@@ -36,8 +36,8 @@ const Services = () => {
     },
     {
       icon: "💬",
-      title: "Local SEO Buffalo NY",
-      description: "Dominate Buffalo search results with our proven local SEO strategies that get your business found first.",
+      title: "Automated Follow-Up",
+      description: "Never miss a lead with intelligent follow-up sequences that nurture prospects.",
       problem: "Leads go cold because manual follow-up is inconsistent, time-consuming, and easy to forget.",
       solution: "Our automated follow-up system sends personalized messages at the perfect timing, keeps leads warm, and moves them through your sales funnel automatically.",
       results: [
@@ -104,7 +104,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
-            Digital Marketing Services for Buffalo Businesses
+            What We Do
           </h2>
         </div>
         
