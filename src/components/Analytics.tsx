@@ -5,6 +5,10 @@ declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
+    fbq?: (...args: any[]) => void;
+    _linkedin_partner_id?: string;
+    uetq?: any[];
+    ttq?: any;
     trackAppointmentBooking?: () => void;
     trackFormSubmission?: (formType: string) => void;
     trackDownload?: (downloadName: string) => void;
@@ -20,8 +24,36 @@ export const Analytics = () => {
     noscript.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
     document.body.appendChild(noscript);
 
+    // Initialize tracking pixels
+    const initializePixels = () => {
+      // Facebook Pixel
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
+        window.fbq('track', 'PageView');
+      }
+
+      // LinkedIn Insight Tag
+      if (typeof window !== 'undefined') {
+        (window as any)._linkedin_data_partner_ids = (window as any)._linkedin_data_partner_ids || [];
+        (window as any)._linkedin_data_partner_ids.push("YOUR_LINKEDIN_PARTNER_ID");
+      }
+
+      // Microsoft Advertising (Bing)
+      if (typeof window !== 'undefined' && window.uetq) {
+        window.uetq.push('event', 'page_view', {});
+      }
+
+      // TikTok Pixel
+      if (typeof window !== 'undefined' && window.ttq) {
+        window.ttq.page();
+      }
+    };
+
+    initializePixels();
+
     // Conversion tracking functions
     window.trackAppointmentBooking = () => {
+      // Google Analytics
       if (window.gtag) {
         window.gtag('event', 'conversion', {
           'send_to': 'GA_MEASUREMENT_ID/CONVERSION_ID',
@@ -29,6 +61,23 @@ export const Analytics = () => {
           'currency': 'USD',
           'event_category': 'Lead Generation',
           'event_label': 'Appointment Booking'
+        });
+      }
+      
+      // Facebook Pixel
+      if (window.fbq) {
+        window.fbq('track', 'Lead', {
+          value: 500,
+          currency: 'USD',
+          content_name: 'Business Consulting Appointment'
+        });
+      }
+      
+      // LinkedIn
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'LinkedIn',
+          event_action: 'Appointment Booking'
         });
       }
       
