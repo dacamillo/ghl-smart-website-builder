@@ -1,0 +1,284 @@
+<!-- BODY SECTION OPTIMIZATION FOR GOHIGHLEVEL -->
+<!-- Paste this code in GoHighLevel's Body Tracking Code section (before closing </body> tag) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Lazy Loading Implementation -->
+<script>
+// Intersection Observer for lazy loading images
+document.addEventListener('DOMContentLoaded', function() {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+        img.classList.add('loaded');
+        imageObserver.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[data-src]').forEach(img => {
+    imageObserver.observe(img);
+  });
+});
+</script>
+
+<!-- Conversion Tracking -->
+<script>
+// Appointment booking conversion tracking
+function trackAppointmentBooking() {
+  // Google Analytics conversion
+  gtag('event', 'conversion', {
+    'send_to': 'GA_MEASUREMENT_ID/CONVERSION_ID',
+    'value': 500,
+    'currency': 'USD',
+    'event_category': 'Lead Generation',
+    'event_label': 'Appointment Booking'
+  });
+  
+  // Google Tag Manager event
+  dataLayer.push({
+    'event': 'appointment_booking',
+    'event_category': 'Lead Generation',
+    'event_action': 'Book Appointment',
+    'event_label': 'Business Consulting'
+  });
+}
+
+// Form submission tracking
+function trackFormSubmission(formType) {
+  gtag('event', 'generate_lead', {
+    'event_category': 'Lead Generation',
+    'event_action': 'Form Submission',
+    'event_label': formType
+  });
+}
+
+// Download tracking for lead magnets
+function trackDownload(downloadName) {
+  gtag('event', 'file_download', {
+    'event_category': 'Lead Magnets',
+    'event_action': 'Download',
+    'event_label': downloadName
+  });
+}
+</script>
+
+<!-- Call Tracking Implementation -->
+<script>
+// Dynamic phone number insertion for call tracking
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneNumbers = document.querySelectorAll('.tracking-phone');
+  phoneNumbers.forEach(phone => {
+    // Replace with your call tracking number
+    phone.href = 'tel:+1-800-TRACK-NUMBER';
+    phone.innerHTML = '(800) TRACK-NUMBER';
+  });
+});
+
+// Call button click tracking
+document.addEventListener('click', function(e) {
+  if (e.target.matches('a[href^="tel:"]')) {
+    gtag('event', 'phone_call', {
+      'event_category': 'Contact',
+      'event_action': 'Phone Call Click',
+      'event_label': 'Header Phone'
+    });
+  }
+});
+</script>
+
+<!-- A/B Testing Framework -->
+<script>
+// Simple A/B testing implementation
+function initABTest() {
+  const testVariant = Math.random() < 0.5 ? 'A' : 'B';
+  
+  // Store variant in session storage
+  sessionStorage.setItem('abTestVariant', testVariant);
+  
+  // Track variant in analytics
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    'custom_map': {
+      'ab_test_variant': testVariant
+    }
+  });
+  
+  // Apply variant-specific changes
+  if (testVariant === 'B') {
+    // Example: Change CTA button text
+    document.querySelectorAll('.ab-test-cta').forEach(button => {
+      button.innerHTML = 'Get Free Business Audit';
+    });
+  }
+}
+
+// Initialize A/B test on page load
+document.addEventListener('DOMContentLoaded', initABTest);
+</script>
+
+<!-- Form Optimization -->
+<script>
+// Enhanced form validation and UX
+document.addEventListener('DOMContentLoaded', function() {
+  const forms = document.querySelectorAll('form');
+  
+  forms.forEach(form => {
+    // Add loading state to forms
+    form.addEventListener('submit', function() {
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.innerHTML = 'Submitting...';
+        submitBtn.disabled = true;
+      }
+    });
+    
+    // Track form interactions
+    form.addEventListener('focusin', function(e) {
+      gtag('event', 'form_start', {
+        'event_category': 'Form Interaction',
+        'event_action': 'Form Start',
+        'event_label': form.id || 'Unknown Form'
+      });
+    });
+  });
+});
+</script>
+
+<!-- Performance Monitoring -->
+<script>
+// Core Web Vitals tracking
+function trackWebVitals() {
+  // Largest Contentful Paint
+  new PerformanceObserver((entryList) => {
+    for (const entry of entryList.getEntries()) {
+      gtag('event', 'LCP', {
+        'event_category': 'Web Vitals',
+        'event_action': 'Largest Contentful Paint',
+        'value': Math.round(entry.startTime)
+      });
+    }
+  }).observe({entryTypes: ['largest-contentful-paint']});
+  
+  // First Input Delay
+  new PerformanceObserver((entryList) => {
+    for (const entry of entryList.getEntries()) {
+      gtag('event', 'FID', {
+        'event_category': 'Web Vitals',
+        'event_action': 'First Input Delay',
+        'value': Math.round(entry.processingStart - entry.startTime)
+      });
+    }
+  }).observe({entryTypes: ['first-input']});
+}
+
+// Initialize performance tracking
+if ('PerformanceObserver' in window) {
+  trackWebVitals();
+}
+</script>
+
+<!-- Cookie Consent & GDPR Compliance -->
+<script>
+// Simple cookie consent implementation
+function showCookieConsent() {
+  if (!localStorage.getItem('cookieConsent')) {
+    const consentBanner = document.createElement('div');
+    consentBanner.innerHTML = `
+      <div style="position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white; padding: 20px; z-index: 10000; text-align: center;">
+        <p>We use cookies to improve your experience and analyze website traffic. 
+        <a href="/privacy-policy" style="color: #4CAF50;">Learn more</a></p>
+        <button onclick="acceptCookies()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; margin: 0 10px; cursor: pointer;">Accept</button>
+        <button onclick="declineCookies()" style="background: #f44336; color: white; border: none; padding: 10px 20px; cursor: pointer;">Decline</button>
+      </div>
+    `;
+    document.body.appendChild(consentBanner);
+  }
+}
+
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.querySelector('[style*="position: fixed"]').remove();
+  // Initialize tracking scripts here
+  gtag('consent', 'update', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'granted'
+  });
+}
+
+function declineCookies() {
+  localStorage.setItem('cookieConsent', 'declined');
+  document.querySelector('[style*="position: fixed"]').remove();
+  gtag('consent', 'update', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied'
+  });
+}
+
+// Show consent banner on page load
+document.addEventListener('DOMContentLoaded', showCookieConsent);
+</script>
+
+<!-- Trust Signals -->
+<script>
+// SSL verification display
+document.addEventListener('DOMContentLoaded', function() {
+  if (location.protocol === 'https:') {
+    const sslBadges = document.querySelectorAll('.ssl-badge');
+    sslBadges.forEach(badge => {
+      badge.style.display = 'inline-block';
+      badge.innerHTML = '🔒 Secure Site';
+    });
+  }
+});
+</script>
+
+<!-- Scroll Tracking for Engagement -->
+<script>
+// Scroll depth tracking
+let scrollDepthTracked = [];
+
+window.addEventListener('scroll', function() {
+  const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+  
+  if (scrollPercent >= 25 && !scrollDepthTracked.includes(25)) {
+    scrollDepthTracked.push(25);
+    gtag('event', 'scroll_25', {
+      'event_category': 'Engagement',
+      'event_action': 'Scroll Depth',
+      'event_label': '25%'
+    });
+  }
+  
+  if (scrollPercent >= 50 && !scrollDepthTracked.includes(50)) {
+    scrollDepthTracked.push(50);
+    gtag('event', 'scroll_50', {
+      'event_category': 'Engagement',
+      'event_action': 'Scroll Depth',
+      'event_label': '50%'
+    });
+  }
+  
+  if (scrollPercent >= 75 && !scrollDepthTracked.includes(75)) {
+    scrollDepthTracked.push(75);
+    gtag('event', 'scroll_75', {
+      'event_category': 'Engagement',
+      'event_action': 'Scroll Depth',
+      'event_label': '75%'
+    });
+  }
+  
+  if (scrollPercent >= 90 && !scrollDepthTracked.includes(90)) {
+    scrollDepthTracked.push(90);
+    gtag('event', 'scroll_90', {
+      'event_category': 'Engagement',
+      'event_action': 'Scroll Depth',
+      'event_label': '90%'
+    });
+  }
+});
+</script>
