@@ -7,87 +7,87 @@ const Services = () => {
 
   const services = [
     {
-      icon: "🤖",
-      title: "AI-Powered CRM",
-      description: "Smart customer relationship management that learns and adapts to your business needs.",
-      problem: "Most small businesses lose track of leads, forget to follow up, and miss opportunities because they're managing everything manually.",
-      solution: "Our AI-powered CRM automatically tracks every interaction, scores leads by likelihood to convert, and reminds you exactly when and how to follow up.",
+      icon: "📈",
+      title: "Strategic Business Planning",
+      description: "Comprehensive growth roadmaps and strategic positioning to scale your business systematically.",
+      problem: "Most businesses hit growth plateaus because they lack a clear strategic roadmap and try to scale without proper planning, leading to inefficiencies and missed opportunities.",
+      solution: "We develop comprehensive growth roadmaps with market expansion strategies, competitive positioning, and clear implementation timelines that guide your business to the next level.",
       results: [
-        "35% increase in lead conversion rates",
-        "Save 10+ hours per week on admin tasks", 
-        "Never miss a follow up again",
-        "Automatic lead scoring and prioritization",
-        "Seamless integration with all your tools"
+        "Clear 12-24 month growth roadmap",
+        "Average 180% revenue increase in 18 months",
+        "Strategic market positioning advantage",
+        "Reduced operational bottlenecks by 60%",
+        "Streamlined decision-making processes"
+      ]
+    },
+    {
+      icon: "⚙️",
+      title: "Operational Scaling Systems",
+      description: "Build efficient processes and systems that allow your business to scale without breaking.",
+      problem: "Growing businesses often become chaotic as they scale, with processes breaking down, quality suffering, and teams struggling to keep up with demand.",
+      solution: "We design and implement scalable operational systems, optimize workflows, and create team structures that maintain quality while handling increased volume.",
+      results: [
+        "50% improvement in operational efficiency",
+        "Scalable processes for 3x growth capacity",
+        "Reduced operational costs by 25%",
+        "Improved team productivity by 40%",
+        "Automated workflow systems"
+      ]
+    },
+    {
+      icon: "💰",
+      title: "Revenue Growth Acceleration",
+      description: "Optimize sales processes and develop new revenue streams to accelerate business growth.",
+      problem: "Many businesses rely on single revenue streams or inefficient sales processes that limit their growth potential and make them vulnerable to market changes.",
+      solution: "We optimize existing sales funnels, diversify revenue streams, and implement customer acquisition strategies that consistently drive sustainable growth.",
+      results: [
+        "Average 247% revenue growth in 12 months",
+        "3-5 new revenue streams developed",
+        "40% improvement in customer lifetime value",
+        "Reduced customer acquisition cost by 30%",
+        "Predictable monthly recurring revenue"
       ]
     },
     {
       icon: "👥",
-      title: "Lead Capture Funnels",
-      description: "High-converting funnels that turn visitors into qualified leads automatically.",
-      problem: "Your website visitors leave without giving you their contact information, and you have no way to re-engage them.",
-      solution: "We build high-converting landing pages and funnels that capture leads with irresistible offers and automatically nurture them into paying customers.",
+      title: "Leadership & Team Development",
+      description: "Build strong leadership capabilities and high-performing teams that drive business success.",
+      problem: "Business owners often become bottlenecks as they scale, and teams lack the leadership development needed to take on greater responsibilities and drive growth.",
+      solution: "We provide executive coaching, develop internal leadership capabilities, and optimize team performance to create a self-sustaining growth organization.",
       results: [
-        "3x more leads from your existing traffic",
-        "Professional landing pages that convert at 25%+",
-        "Automated lead magnets and opt-in sequences",
-        "A/B tested designs for maximum performance",
-        "Mobile-optimized for today's customers"
-      ]
-    },
-    {
-      icon: "💬",
-      title: "Automated Follow-Up",
-      description: "Never miss a lead with intelligent follow-up sequences that nurture prospects.",
-      problem: "Leads go cold because manual follow-up is inconsistent, time-consuming, and easy to forget.",
-      solution: "Our automated follow-up system sends personalized messages at the perfect timing, keeps leads warm, and moves them through your sales funnel automatically.",
-      results: [
-        "50% more leads convert to customers",
-        "Save 15+ hours per week on follow-up",
-        "Consistent messaging that builds trust",
-        "Automatic lead nurturing sequences",
-        "Smart timing based on lead behavior"
+        "Leadership team capability improvement",
+        "50% reduction in owner dependency",
+        "Improved team retention by 70%",
+        "Enhanced decision-making speed",
+        "Scalable management systems"
       ]
     },
     {
       icon: "📊",
-      title: "Reputation Management",
-      description: "Build trust and credibility with automated review management and monitoring.",
-      problem: "Bad reviews hurt your business, and you're not getting enough positive reviews to build trust with potential customers.",
-      solution: "Our reputation management system automatically requests reviews from happy customers, monitors your online presence, and helps you respond to feedback professionally.",
+      title: "Financial Growth Management",
+      description: "Optimize cash flow, investment planning, and profitability to fuel sustainable business growth.",
+      problem: "Many growing businesses struggle with cash flow management, don't optimize their profitability, and lack strategic financial planning for sustainable scaling.",
+      solution: "We implement financial management systems, optimize cash flow cycles, and develop investment strategies that support healthy, profitable growth.",
       results: [
-        "4x more positive reviews per month",
-        "Improved Google ranking and visibility",
-        "Professional response to all feedback",
-        "Automated review request sequences",
-        "Real-time reputation monitoring"
+        "Improved cash flow by 60%",
+        "25% increase in profit margins",
+        "Strategic investment planning",
+        "Financial forecasting accuracy",
+        "Optimized capital allocation"
       ]
     },
     {
-      icon: "🧲",
-      title: "Retargeting Ads",
-      description: "Bring back lost visitors with smart retargeting campaigns that convert.",
-      problem: "97% of website visitors leave without buying, and you have no way to bring them back to complete their purchase.",
-      solution: "Our smart retargeting campaigns show personalized ads to people who visited your site, bringing them back when they're ready to buy.",
+      icon: "🔧",
+      title: "Technology & Automation Integration",
+      description: "Implement technology solutions and automation that scale with your business growth.",
+      problem: "Businesses often use outdated technology or manual processes that can't scale, leading to inefficiencies and limiting their growth potential.",
+      solution: "We assess your current tech stack, implement scalable automation solutions, and optimize digital transformation to support accelerated growth.",
       results: [
-        "25% increase in overall conversions",
-        "Lower cost per acquisition",
-        "Personalized ads based on behavior",
-        "Cross-platform retargeting campaigns",
-        "Automated audience optimization"
-      ]
-    },
-    {
-      icon: "📅",
-      title: "Smart Scheduling",
-      description: "Streamline appointments with intelligent booking systems that work 24/7.",
-      problem: "Phone tag and back-and-forth emails waste time when trying to schedule appointments, and you lose business from missed opportunities.",
-      solution: "Our smart scheduling system lets customers book appointments instantly, sends automatic reminders, and integrates with your calendar and CRM.",
-      results: [
-        "60% more appointments booked",
-        "Eliminate phone tag and scheduling emails",
-        "Automatic appointment reminders",
-        "Calendar sync across all devices",
-        "Reduced no-shows and cancellations"
+        "60% reduction in manual processes",
+        "Scalable technology infrastructure",
+        "Improved data accuracy and insights",
+        "Enhanced customer experience",
+        "Future-ready digital capabilities"
       ]
     }
   ];

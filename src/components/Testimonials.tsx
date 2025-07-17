@@ -1,22 +1,22 @@
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Mike Johnson",
-      business: "Johnson Roofing Services",
-      avatar: "MJ",
-      text: "Smart Solution Agency transformed our lead generation completely. We went from struggling to find customers to having a steady stream of qualified leads every week. The automation saves us hours each day!"
+      name: "Don Camillo",
+      business: "Camvest Inc Auto Sales",
+      avatar: "DC",
+      text: "Smart Solution Agency helped us scale from $2M to $5.2M in just 18 months. Their strategic planning and operational systems transformed how we run our business. We're now positioned for continued growth without the growing pains."
     },
     {
-      name: "Dr. Sarah Williams",
-      business: "Bright Smile Dental",
-      avatar: "SW",
-      text: "The AI-powered CRM has been a game changer for our dental practice. Patient follow-ups are automatic, appointments stay filled, and our online reputation has never been better. Highly recommend!"
+      name: "Rev. Ron Burgio",
+      business: "Love Joy Church",
+      avatar: "RB",
+      text: "Working with Smart Solution Agency allowed us to grow our congregation by 300% and expand to 3 locations. Their strategic approach to growth and leadership development gave us the framework to scale sustainably while maintaining our mission."
     },
     {
-      name: "Tom Chen",
-      business: "Chen's Home Services",
-      avatar: "TC",
-      text: "Working with Smart Solution Agency was the best business decision we made this year. Their automation systems helped us double our revenue while actually working fewer hours. The team is incredibly knowledgeable and supportive."
+      name: "Leon McBride",
+      business: "LM Stone",
+      avatar: "LM",
+      text: "The results speak for themselves - we increased revenue by 400% while reducing my working hours by 50%. Smart Solution Agency's systems and processes allowed me to step back from day-to-day operations and focus on strategic growth."
     }
   ];
 
