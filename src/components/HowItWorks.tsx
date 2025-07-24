@@ -18,12 +18,16 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
             How It Works
           </h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            A simple 3-step process that transforms your business operations
+          </p>
         </div>
         
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-12 lg:space-y-0 lg:space-x-8">

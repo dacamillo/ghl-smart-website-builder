@@ -10,6 +10,9 @@ import businessAnalytics from "@/assets/business-analytics.jpg";
 import businessMeeting from "@/assets/business-meeting.jpg";
 import officeWorkspace from "@/assets/office-workspace.jpg";
 import strategyPlanning from "@/assets/strategy-planning.jpg";
+import dashboardAnalytics from "@/assets/dashboard-analytics.jpg";
+import automationTeam from "@/assets/automation-team.jpg";
+import digitalAutomation from "@/assets/digital-automation.jpg";
 
 const Home = () => {
   return (
@@ -18,6 +21,56 @@ const Home = () => {
       <Hero />
       <Services />
       <HowItWorks />
+      
+      {/* Visual Impact Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                See Your Business Transform
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Watch your metrics soar with our data-driven automation solutions that work 24/7 to grow your business.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-lg">Real-time performance tracking</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-lg">Automated lead generation</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-lg">Smart customer management</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={dashboardAnalytics} 
+                alt="Business analytics dashboard" 
+                className="rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -80,6 +133,36 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Team Excellence Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Expert Team. Proven Process.
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our experienced team uses cutting-edge technology to deliver results that exceed expectations.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src={automationTeam} 
+                alt="Professional automation team" 
+                className="rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              />
+            </div>
+            <div>
+              <img 
+                src={digitalAutomation} 
+                alt="Digital automation tools" 
+                className="rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <CallToAction />
       
       {/* Urgent Setup Fee Waiver Banner */}

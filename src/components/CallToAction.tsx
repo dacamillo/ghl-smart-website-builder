@@ -4,8 +4,9 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-primary to-purple-600 text-white py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="bg-gradient-to-r from-primary to-purple-600 text-white py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/src/assets/automation-team.jpg')] bg-cover bg-center opacity-10"></div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up">
           Let's Build Something Smart Together
         </h2>
