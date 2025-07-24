@@ -5,6 +5,8 @@ import HowItWorks from "@/components/HowItWorks";
 import CallToAction from "@/components/CallToAction";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
+import businessAnalytics from "@/assets/business-analytics.jpg";
 
 const Home = () => {
   return (
@@ -14,23 +16,42 @@ const Home = () => {
       <Services />
       <HowItWorks />
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            Why Choose Smart Solution Agency?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🎯</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+              Why Choose Smart Solution Agency?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div>
+                <img 
+                  src={teamCollaboration} 
+                  alt="Team collaboration" 
+                  className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                />
+              </div>
+              <div>
+                <img 
+                  src={businessAnalytics} 
+                  alt="Business analytics" 
+                  className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4 animate-bounce-subtle">🎯</div>
               <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
               <p className="text-muted-foreground">Our AI-powered solutions have helped hundreds of small businesses increase their revenue by an average of 40%.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">⚡</div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4 animate-bounce-subtle">⚡</div>
               <h3 className="text-xl font-semibold mb-4">Fast Implementation</h3>
               <p className="text-muted-foreground">Get up and running in just 2 weeks with our streamlined setup process and dedicated support team.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="text-4xl mb-4">🤝</div>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="text-4xl mb-4 animate-bounce-subtle">🤝</div>
               <h3 className="text-xl font-semibold mb-4">Ongoing Support</h3>
               <p className="text-muted-foreground">We don't just set it up and leave. Our team provides continuous optimization and support.</p>
             </div>

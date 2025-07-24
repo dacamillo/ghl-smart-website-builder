@@ -1,22 +1,26 @@
+import michaelCipolla from "@/assets/michael-cipolla.jpg";
+import leonMcbride from "@/assets/leon-mcbride.jpg";
+import markKmoitek from "@/assets/mark-kmoitek.jpg";
+
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Mike Johnson",
-      business: "Johnson Roofing Services",
-      avatar: "MJ",
-      text: "Smart Solution Agency transformed our lead generation completely. We went from struggling to find customers to having a steady stream of qualified leads every week. The automation saves us hours each day!"
+      name: "Michael Cipolla",
+      business: "716 Realty",
+      image: michaelCipolla,
+      text: "The all-in-one CRM tool and social media marketing strategies from Smart Solution Agency completely transformed how I manage my real estate business. I've seen a significant increase in qualified leads and my client management has never been more organized!"
     },
     {
-      name: "Dr. Sarah Williams",
-      business: "Bright Smile Dental",
-      avatar: "SW",
-      text: "The AI-powered CRM has been a game changer for our dental practice. Patient follow-ups are automatic, appointments stay filled, and our online reputation has never been better. Highly recommend!"
+      name: "Leon McBride",
+      business: "LM Stone",
+      image: leonMcbride,
+      text: "Smart Solution Agency optimized our website and overall online presence, and the results speak for themselves. We're finally seeing real traction online and getting more visibility than we ever had before. Our website is actually working for us now!"
     },
     {
-      name: "Tom Chen",
-      business: "Chen's Home Services",
-      avatar: "TC",
-      text: "Working with Smart Solution Agency was the best business decision we made this year. Their automation systems helped us double our revenue while actually working fewer hours. The team is incredibly knowledgeable and supportive."
+      name: "Mark Kmoitek",
+      business: "Plumbing Services",
+      image: markKmoitek,
+      text: "The team set up our entire digital presence - website, missed call text back system, and AI chatbots trained specifically for our plumbing business. We never miss a lead anymore and the AI receptionist handles appointments and social media perfectly. It's like having a fully trained staff member working 24/7!"
     }
   ];
 
@@ -42,9 +46,11 @@ const Testimonials = () => {
                 "{testimonial.text}"
               </p>
               <div className="flex items-center">
-                <div className="bg-gradient-to-r from-primary to-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4 animate-scale-in">
-                  {testimonial.avatar}
-                </div>
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary shadow-lg animate-scale-in"
+                />
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
                   <div className="text-muted-foreground text-sm">{testimonial.business}</div>
