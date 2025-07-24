@@ -9,7 +9,7 @@ const Pricing = () => {
       name: "Starter Launch Plan",
       price: "$997",
       period: "Setup + $97/MONTHLY",
-      icon: "🚀",
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       description: "Everything you need to get found, capture leads, and start building your online reputation.",
       features: [
         "3-Page Mobile-Optimized Website",
@@ -27,7 +27,7 @@ const Pricing = () => {
       name: "Growth Essentials Plan",
       price: "$1,497",
       period: "Setup + $297/MONTHLY",
-      icon: "🚀",
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       description: "Automate your follow-up, build trust with reviews, and make it easy for customers to book and pay.",
       features: [
         "5-Page Website (add Services, Testimonials)",
@@ -47,7 +47,7 @@ const Pricing = () => {
       name: "Traffic & Content Accelerator",
       price: "$2,497",
       period: "Setup + $497/MONTHLY",
-      icon: "🚀",
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       description: "Attract more visitors, keep your brand top-of-mind, and position yourself as the go-to expert.",
       features: [
         "Everything in Growth Essentials+",
@@ -65,7 +65,7 @@ const Pricing = () => {
       name: "Elite Growth System",
       price: "$3,497",
       period: "Setup + $997/MONTHLY",
-      icon: "🚀",
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
       description: "Accelerate your growth with paid ads, advanced analytics, and hands-on marketing support.",
       features: [
         "Everything in Traffic & Content+",
@@ -83,7 +83,7 @@ const Pricing = () => {
       name: "Enterprise AI Suite",
       price: "$4,997",
       period: "Setup + $1,997/MONTHLY",
-      icon: "👨‍💼",
+      icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
       description: "Unlock the power of AI and automation to scale your business and dominate your market.",
       features: [
         "Everything in Elite Growth+",
@@ -116,7 +116,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-yellow-400 text-red-900 px-4 py-2 rounded-full font-bold text-sm mb-2 animate-bounce-subtle">
-              🔥 LIMITED TIME OFFER 🔥
+              LIMITED TIME OFFER
             </div>
             <h2 className="text-2xl md:text-3xl font-bold mb-2 animate-fade-in-up">
               EXCLUSIVE OFFER: Setup Fee WAIVED!
@@ -128,7 +128,7 @@ const Pricing = () => {
               to="/contact#calendar"
               className="inline-block bg-yellow-400 text-red-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:-translate-y-1 shadow-lg mb-3 animate-scale-in hover:animate-bounce-subtle"
             >
-              🎯 CLAIM YOUR WAIVED SETUP FEE NOW
+              CLAIM YOUR WAIVED SETUP FEE NOW
             </Link>
             <p className="text-sm opacity-90 animate-fade-in-delay-1">
               ⏰ This exclusive offer expires tonight - Don't miss out on thousands in savings!

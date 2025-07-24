@@ -46,11 +46,9 @@ const Testimonials = () => {
                 "{testimonial.text}"
               </p>
               <div className="flex items-center">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-primary shadow-lg animate-scale-in"
-                />
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  {testimonial.name.split(' ').map(n => n[0]).join('')}
+                </div>
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
                   <div className="text-muted-foreground text-sm">{testimonial.business}</div>
