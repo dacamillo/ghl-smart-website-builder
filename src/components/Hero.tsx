@@ -4,8 +4,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="bg-gradient-to-br from-primary to-purple-600 text-white py-12 lg:py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="hero" className="bg-gradient-to-br from-primary to-purple-600 text-white py-12 lg:py-16 overflow-hidden relative">
+      <div className="absolute inset-0 bg-[url('/src/assets/digital-automation.jpg')] bg-cover bg-center opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">
             Smarter Marketing. Simplified Growth.

@@ -102,8 +102,9 @@ const Pricing = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <section className="py-20 bg-gradient-to-br from-primary to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-br from-primary to-purple-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/src/assets/business-analytics.jpg')] bg-cover bg-center opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">Flexible Pricing Options to Suit Your Needs</h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-4xl mx-auto animate-fade-in-up-delay-1">
             Tailored Pricing for Your Business Needs
