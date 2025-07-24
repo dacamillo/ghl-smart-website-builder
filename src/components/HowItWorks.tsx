@@ -2,18 +2,18 @@ const HowItWorks = () => {
   const steps = [
     {
       number: "1",
-      title: "Growth Assessment",
-      description: "Comprehensive business audit to identify growth bottlenecks, analyze current systems and processes, and uncover scaling opportunities."
+      title: "Discovery Call",
+      description: "We learn about your business, goals, and current challenges to create a custom automation strategy."
     },
     {
       number: "2",
-      title: "Strategic Planning",
-      description: "Custom growth roadmap creation with clear implementation timeline, resource allocation planning, and strategic milestone mapping."
+      title: "Automation Setup",
+      description: "Our team implements and configures your AI-powered systems to work seamlessly with your business."
     },
     {
       number: "3",
-      title: "Execution & Scaling",
-      description: "Hands-on implementation support with performance monitoring, continuous optimization, and strategic adjustments for sustainable growth."
+      title: "Smart Growth Results",
+      description: "Watch your business grow on autopilot while you focus on what you do best."
     }
   ];
 
