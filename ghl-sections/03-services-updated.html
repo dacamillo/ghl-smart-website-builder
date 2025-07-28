@@ -1,0 +1,510 @@
+<!-- SERVICES SECTION - Add as second section on Home page -->
+<style>
+  .ghl-services {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  }
+  
+  .ghl-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .ghl-services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .ghl-services-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .ghl-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .ghl-service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    text-align: center;
+  }
+  
+  .ghl-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+  
+  .ghl-service-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .ghl-service-icon.ai-crm {
+    background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  }
+  
+  .ghl-service-icon.lead-capture {
+    background: linear-gradient(135deg, #10b981, #059669);
+  }
+  
+  .ghl-service-icon.follow-up {
+    background: linear-gradient(135deg, #f59e0b, #dc2626);
+  }
+  
+  .ghl-service-icon.reputation {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  }
+  
+  .ghl-service-icon.retargeting {
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+  }
+  
+  .ghl-service-icon.scheduling {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+  }
+  
+  .ghl-service-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .ghl-service-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ghl-service-learn-more {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .ghl-service-learn-more:hover {
+    color: #7c3aed;
+  }
+  
+  /* Modal Styles */
+  .ghl-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .ghl-modal-content {
+    background: white;
+    border-radius: 1rem;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .ghl-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .ghl-modal-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .ghl-modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .ghl-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .ghl-modal-close:hover {
+    background: #f3f4f6;
+  }
+  
+  .ghl-modal-body {
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .ghl-problem-section, .ghl-solution-section, .ghl-results-section {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid;
+  }
+  
+  .ghl-problem-section {
+    background: #fef2f2;
+    border-left-color: #f87171;
+  }
+  
+  .ghl-solution-section {
+    background: #eff6ff;
+    border-left-color: #60a5fa;
+  }
+  
+  .ghl-results-section {
+    background: #f0fdf4;
+    border-left-color: #4ade80;
+  }
+  
+  .ghl-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ghl-section-text {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+  
+  .ghl-results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ghl-results-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ghl-results-check {
+    color: #10b981;
+    font-weight: bold;
+  }
+  
+  .ghl-modal-cta {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+  
+  .ghl-modal-button {
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .ghl-modal-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .ghl-services {
+      padding: 3rem 1rem;
+    }
+    
+    .ghl-services-title {
+      font-size: 2rem;
+    }
+    
+    .ghl-services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .ghl-modal-body {
+      grid-template-columns: 1fr;
+    }
+    
+    .ghl-modal-content {
+      margin: 1rem;
+    }
+  }
+</style>
+
+<section class="ghl-services">
+  <div class="ghl-services-container">
+    <h2 class="ghl-services-title">What We Do</h2>
+    <p class="ghl-services-subtitle">Powerful automation solutions that transform how you connect with customers and grow your business</p>
+    
+    <div class="ghl-services-grid">
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon ai-crm">
+          <span>🤖</span>
+        </div>
+        <h3 class="ghl-service-title">AI-Powered CRM</h3>
+        <p class="ghl-service-description">Transform your customer relationships with intelligent automation that never sleeps, never forgets, and always follows up at the perfect moment.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(0)">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon lead-capture">
+          <span>📈</span>
+        </div>
+        <h3 class="ghl-service-title">Lead Capture Funnels</h3>
+        <p class="ghl-service-description">Turn every visitor into a potential customer with conversion-optimized funnels that capture leads while they sleep.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(1)">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon follow-up">
+          <span>💬</span>
+        </div>
+        <h3 class="ghl-service-title">Automated Follow-Up</h3>
+        <p class="ghl-service-description">Never let another lead slip away with intelligent messaging that nurtures prospects into paying customers automatically.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(2)">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon reputation">
+          <span>⭐</span>
+        </div>
+        <h3 class="ghl-service-title">Reputation Management</h3>
+        <p class="ghl-service-description">Build unshakeable trust and credibility with automated review systems that showcase your excellence to the world.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(3)">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon retargeting">
+          <span>🎯</span>
+        </div>
+        <h3 class="ghl-service-title">Retargeting Ads</h3>
+        <p class="ghl-service-description">Bring back lost visitors with precision-targeted campaigns that convert browsers into buyers with surgical accuracy.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(4)">Learn More →</a>
+      </div>
+      
+      <div class="ghl-service-card">
+        <div class="ghl-service-icon scheduling">
+          <span>📅</span>
+        </div>
+        <h3 class="ghl-service-title">Smart Scheduling</h3>
+        <p class="ghl-service-description">Eliminate appointment chaos with intelligent booking systems that work around the clock to fill your calendar.</p>
+        <a class="ghl-service-learn-more" onclick="openServiceModal(5)">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Detail Modal -->
+<div id="serviceModal" class="ghl-modal-overlay" style="display: none;">
+  <div class="ghl-modal-content">
+    <div class="ghl-modal-header">
+      <div class="ghl-modal-title-container">
+        <div id="modalIcon" class="ghl-service-icon"></div>
+        <h2 id="modalTitle" class="ghl-modal-title"></h2>
+      </div>
+      <button class="ghl-modal-close" onclick="closeServiceModal()">×</button>
+    </div>
+    
+    <div class="ghl-modal-body">
+      <div class="ghl-problem-section">
+        <h3 class="ghl-section-title">The Problem</h3>
+        <p id="modalProblem" class="ghl-section-text"></p>
+      </div>
+      
+      <div class="ghl-solution-section">
+        <h3 class="ghl-section-title">Our Solution</h3>
+        <p id="modalSolution" class="ghl-section-text"></p>
+      </div>
+      
+      <div class="ghl-results-section" style="grid-column: 1 / -1;">
+        <h3 class="ghl-section-title">Results You'll See</h3>
+        <ul id="modalResults" class="ghl-results-list"></ul>
+      </div>
+      
+      <div class="ghl-modal-cta">
+        <button class="ghl-modal-button" onclick="window.location.href='/contact'">
+          Get Started with <span id="modalServiceName"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const services = [
+    {
+      icon: '🤖',
+      iconClass: 'ai-crm',
+      title: 'AI-Powered CRM',
+      problem: 'Most small businesses lose track of leads, forget to follow up, and miss opportunities because they\'re managing everything manually.',
+      solution: 'Our AI-powered CRM automatically tracks every interaction, scores leads by likelihood to convert, and reminds you exactly when and how to follow up.',
+      results: [
+        '35% increase in lead conversion rates',
+        'Save 10+ hours per week on admin tasks', 
+        'Never miss a follow up again',
+        'Automatic lead scoring and prioritization',
+        'Seamless integration with all your tools'
+      ]
+    },
+    {
+      icon: '📈',
+      iconClass: 'lead-capture',
+      title: 'Lead Capture Funnels',
+      problem: 'Your website visitors leave without giving you their contact information, and you have no way to re-engage them.',
+      solution: 'We build high-converting landing pages and funnels that capture leads with irresistible offers and automatically nurture them into paying customers.',
+      results: [
+        '3x more leads from your existing traffic',
+        'Professional landing pages that convert at 25%+',
+        'Automated lead magnets and opt-in sequences',
+        'A/B tested designs for maximum performance',
+        'Mobile-optimized for today\'s customers'
+      ]
+    },
+    {
+      icon: '💬',
+      iconClass: 'follow-up',
+      title: 'Automated Follow-Up',
+      problem: 'Leads go cold because manual follow-up is inconsistent, time-consuming, and easy to forget.',
+      solution: 'Our automated follow-up system sends personalized messages at the perfect timing, keeps leads warm, and moves them through your sales funnel automatically.',
+      results: [
+        '50% more leads convert to customers',
+        'Save 15+ hours per week on follow-up',
+        'Consistent messaging that builds trust',
+        'Automatic lead nurturing sequences',
+        'Smart timing based on lead behavior'
+      ]
+    },
+    {
+      icon: '⭐',
+      iconClass: 'reputation',
+      title: 'Reputation Management',
+      problem: 'Bad reviews hurt your business, and you\'re not getting enough positive reviews to build trust with potential customers.',
+      solution: 'Our reputation management system automatically requests reviews from happy customers, monitors your online presence, and helps you respond to feedback professionally.',
+      results: [
+        '4x more positive reviews per month',
+        'Improved Google ranking and visibility',
+        'Professional response to all feedback',
+        'Automated review request sequences',
+        'Real-time reputation monitoring'
+      ]
+    },
+    {
+      icon: '🎯',
+      iconClass: 'retargeting',
+      title: 'Retargeting Ads',
+      problem: '97% of website visitors leave without buying, and you have no way to bring them back to complete their purchase.',
+      solution: 'Our smart retargeting campaigns show personalized ads to people who visited your site, bringing them back when they\'re ready to buy.',
+      results: [
+        '25% increase in overall conversions',
+        'Lower cost per acquisition',
+        'Personalized ads based on behavior',
+        'Cross-platform retargeting campaigns',
+        'Automated audience optimization'
+      ]
+    },
+    {
+      icon: '📅',
+      iconClass: 'scheduling',
+      title: 'Smart Scheduling',
+      problem: 'Phone tag and back-and-forth emails waste time when trying to schedule appointments, and you lose business from missed opportunities.',
+      solution: 'Our smart scheduling system lets customers book appointments instantly, sends automatic reminders, and integrates with your calendar and CRM.',
+      results: [
+        '60% more appointments booked',
+        'Eliminate phone tag and scheduling emails',
+        'Automatic appointment reminders',
+        'Calendar sync across all devices',
+        'Reduced no-shows and cancellations'
+      ]
+    }
+  ];
+
+  function openServiceModal(serviceIndex) {
+    const service = services[serviceIndex];
+    const modal = document.getElementById('serviceModal');
+    
+    // Set content
+    document.getElementById('modalIcon').innerHTML = '<span>' + service.icon + '</span>';
+    document.getElementById('modalIcon').className = 'ghl-service-icon ' + service.iconClass;
+    document.getElementById('modalTitle').textContent = service.title;
+    document.getElementById('modalProblem').textContent = service.problem;
+    document.getElementById('modalSolution').textContent = service.solution;
+    document.getElementById('modalServiceName').textContent = service.title;
+    
+    // Set results
+    const resultsList = document.getElementById('modalResults');
+    resultsList.innerHTML = '';
+    service.results.forEach(result => {
+      const li = document.createElement('li');
+      li.className = 'ghl-results-item';
+      li.innerHTML = '<span class="ghl-results-check">✓</span><span>' + result + '</span>';
+      resultsList.appendChild(li);
+    });
+    
+    // Show modal
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeServiceModal() {
+    const modal = document.getElementById('serviceModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside
+  document.getElementById('serviceModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeServiceModal();
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeServiceModal();
+    }
+  });
+</script>
