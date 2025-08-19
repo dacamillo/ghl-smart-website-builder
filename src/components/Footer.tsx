@@ -86,6 +86,20 @@ const Footer = () => {
         
         {/* Bottom Section */}
         <div className="border-t border-gray-700 pt-8 text-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
+            <button
+              onClick={() => navigate('/terms')}
+              className="text-gray-400 hover:text-primary transition-colors duration-300"
+            >
+              Terms of Service
+            </button>
+            <button
+              onClick={() => navigate('/privacy')}
+              className="text-gray-400 hover:text-primary transition-colors duration-300"
+            >
+              Privacy Policy
+            </button>
+          </div>
           <p className="text-gray-400">
             © 2024 Smart Solution Agency. All rights reserved.
           </p>
